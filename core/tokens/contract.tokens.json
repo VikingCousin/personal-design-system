@@ -1,0 +1,1295 @@
+{
+  "$description": "PDS Core v1.0 · Semantischer Token-Vertrag. Namen, Typen und Bedeutungen. KEINE Werte: Jedes Projekt belegt alle required=true Tokens in projects/<p>/tokens/semantic.tokens.json mit Verweisen auf eigene Primitives. Optionale Gruppen nur bei Bedarf.",
+  "color": {
+    "brand": {
+      "primary": {
+        "$type": "color",
+        "$description": "Hauptfarbe der Marke (muss nicht die Aktionsfarbe sein)",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "secondary": {
+        "$type": "color",
+        "$description": "Zweite Markenfarbe",
+        "$extensions": {
+          "pds": {
+            "required": false
+          }
+        }
+      },
+      "accent": {
+        "$type": "color",
+        "$description": "Akzentfarbe der Marke",
+        "$extensions": {
+          "pds": {
+            "required": false
+          }
+        }
+      }
+    },
+    "bg": {
+      "canvas": {
+        "$type": "color",
+        "$description": "Grundfläche der Seite/App",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "surface": {
+        "$type": "color",
+        "$description": "Fläche für Karten, Panels",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "surface-raised": {
+        "$type": "color",
+        "$description": "erhöhte Fläche (Dropdown, Dialog)",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "surface-sunken": {
+        "$type": "color",
+        "$description": "vertiefte Fläche (Eingabebereiche, Code)",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "inverse": {
+        "$type": "color",
+        "$description": "invertierte Fläche (z. B. Tooltip, dunkler Footer)",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      }
+    },
+    "text": {
+      "primary": {
+        "$type": "color",
+        "$description": "Haupttext",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "secondary": {
+        "$type": "color",
+        "$description": "Sekundärtext, Metadaten (≥ 4.5:1)",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "disabled": {
+        "$type": "color",
+        "$description": "Text deaktivierter Elemente",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "inverse": {
+        "$type": "color",
+        "$description": "Text auf bg.inverse",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "link": {
+        "$type": "color",
+        "$description": "Links im Fließtext",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "link-hover": {
+        "$type": "color",
+        "$description": "Links im Hover-Zustand",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "on-action": {
+        "$type": "color",
+        "$description": "Text auf action.primary.bg und action.danger.bg",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      }
+    },
+    "border": {
+      "default": {
+        "$type": "color",
+        "$description": "Standardlinien, Trenner",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "strong": {
+        "$type": "color",
+        "$description": "Rahmen von Eingabefeldern (≥ 3:1)",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "subtle": {
+        "$type": "color",
+        "$description": "sehr leichte Trennung",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      }
+    },
+    "action": {
+      "primary": {
+        "bg": {
+          "$type": "color",
+          "$description": "Hauptaktion",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$description": "Hauptaktion Hover",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        },
+        "bg-active": {
+          "$type": "color",
+          "$description": "Hauptaktion gedrückt",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        },
+        "text": {
+          "$type": "color",
+          "$description": "Text/Icon auf Hauptaktion",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        }
+      },
+      "secondary": {
+        "bg": {
+          "$type": "color",
+          "$description": "Nebenaktion (oft transparent)",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$description": "Nebenaktion Hover",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        },
+        "bg-active": {
+          "$type": "color",
+          "$description": "Nebenaktion gedrückt",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        },
+        "text": {
+          "$type": "color",
+          "$description": "Text Nebenaktion",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        },
+        "border": {
+          "$type": "color",
+          "$description": "Rahmen Nebenaktion",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        }
+      },
+      "danger": {
+        "bg": {
+          "$type": "color",
+          "$description": "destruktive Aktion",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$description": "destruktive Aktion Hover",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        },
+        "bg-active": {
+          "$type": "color",
+          "$description": "destruktive Aktion gedrückt",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        },
+        "text": {
+          "$type": "color",
+          "$description": "Text auf destruktiver Aktion",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        }
+      }
+    },
+    "selection": {
+      "bg": {
+        "$type": "color",
+        "$description": "ausgewählte Zeile/Option",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "text": {
+        "$type": "color",
+        "$description": "Text in Auswahl",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      }
+    },
+    "feedback": {
+      "success": {
+        "bg": {
+          "$type": "color",
+          "$description": "Erfolg: Hintergrund",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        },
+        "text": {
+          "$type": "color",
+          "$description": "Erfolg: Text",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        },
+        "border": {
+          "$type": "color",
+          "$description": "Erfolg: Rahmen",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        },
+        "icon": {
+          "$type": "color",
+          "$description": "Erfolg: Icon (≥ 3:1)",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        }
+      },
+      "warning": {
+        "bg": {
+          "$type": "color",
+          "$description": "Warnung: Hintergrund",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        },
+        "text": {
+          "$type": "color",
+          "$description": "Warnung: Text",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        },
+        "border": {
+          "$type": "color",
+          "$description": "Warnung: Rahmen",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        },
+        "icon": {
+          "$type": "color",
+          "$description": "Warnung: Icon (≥ 3:1)",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        }
+      },
+      "error": {
+        "bg": {
+          "$type": "color",
+          "$description": "Fehler: Hintergrund",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        },
+        "text": {
+          "$type": "color",
+          "$description": "Fehler: Text",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        },
+        "border": {
+          "$type": "color",
+          "$description": "Fehler: Rahmen",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        },
+        "icon": {
+          "$type": "color",
+          "$description": "Fehler: Icon (≥ 3:1)",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        }
+      },
+      "info": {
+        "bg": {
+          "$type": "color",
+          "$description": "Information: Hintergrund",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        },
+        "text": {
+          "$type": "color",
+          "$description": "Information: Text",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        },
+        "border": {
+          "$type": "color",
+          "$description": "Information: Rahmen",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        },
+        "icon": {
+          "$type": "color",
+          "$description": "Information: Icon (≥ 3:1)",
+          "$extensions": {
+            "pds": {
+              "required": true
+            }
+          }
+        }
+      }
+    },
+    "focus": {
+      "ring": {
+        "$type": "color",
+        "$description": "Fokusring (≥ 3:1 gegen Umgebung)",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      }
+    },
+    "overlay": {
+      "scrim": {
+        "$type": "color",
+        "$description": "Abdunklung hinter Dialogen",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      }
+    },
+    "data": {
+      "$description": "OPTIONAL: Diagrammfarben (kategorial series-1…n, sequenziell, divergierend)",
+      "series-1": {
+        "$type": "color",
+        "$description": "erste Datenreihe",
+        "$extensions": {
+          "pds": {
+            "required": false
+          }
+        }
+      }
+    },
+    "material": {
+      "$description": "OPTIONAL: physische Materialfarben, nie für UI",
+      "primary": {
+        "$type": "color",
+        "$description": "Hauptmaterial",
+        "$extensions": {
+          "pds": {
+            "required": false
+          }
+        }
+      }
+    }
+  },
+  "text": {
+    "$description": "Composite-Typostile ($type typography): fontFamily, fontSize, lineHeight, fontWeight, letterSpacing",
+    "display": {
+      "lg": {
+        "$type": "typography",
+        "$description": "Hero-Anzeige",
+        "$extensions": {
+          "pds": {
+            "required": false
+          }
+        }
+      },
+      "md": {
+        "$type": "typography",
+        "$description": "große Anzeige",
+        "$extensions": {
+          "pds": {
+            "required": false
+          }
+        }
+      }
+    },
+    "heading": {
+      "xl": {
+        "$type": "typography",
+        "$description": "Überschrift h1",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "lg": {
+        "$type": "typography",
+        "$description": "Überschrift h2",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "md": {
+        "$type": "typography",
+        "$description": "Überschrift h3",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "sm": {
+        "$type": "typography",
+        "$description": "Überschrift h4",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      }
+    },
+    "body": {
+      "lg": {
+        "$type": "typography",
+        "$description": "Einleitung",
+        "$extensions": {
+          "pds": {
+            "required": false
+          }
+        }
+      },
+      "md": {
+        "$type": "typography",
+        "$description": "Lesetext Standard (≥ 16 px bzw. Profilwert)",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "sm": {
+        "$type": "typography",
+        "$description": "kleiner Lesetext",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      }
+    },
+    "label": {
+      "md": {
+        "$type": "typography",
+        "$description": "Buttons, Labels, Navigation",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "sm": {
+        "$type": "typography",
+        "$description": "kleine Labels",
+        "$extensions": {
+          "pds": {
+            "required": false
+          }
+        }
+      }
+    },
+    "caption": {
+      "$type": "typography",
+      "$description": "Hilfstexte, Bildunterschriften (≥ 12 px, empfohlen ≥ 14 px)",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    },
+    "code": {
+      "$type": "typography",
+      "$description": "Code",
+      "$extensions": {
+        "pds": {
+          "required": false
+        }
+      }
+    }
+  },
+  "font": {
+    "family": {
+      "body": {
+        "$type": "fontFamily",
+        "$description": "Lesetext und Bedienung",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "display": {
+        "$type": "fontFamily",
+        "$description": "Überschriften (sonst = body)",
+        "$extensions": {
+          "pds": {
+            "required": false
+          }
+        }
+      },
+      "mono": {
+        "$type": "fontFamily",
+        "$description": "Code/Daten",
+        "$extensions": {
+          "pds": {
+            "required": false
+          }
+        }
+      }
+    }
+  },
+  "space": {
+    "inset": {
+      "xs": {
+        "$type": "dimension",
+        "$description": "Innenabstand xs",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "sm": {
+        "$type": "dimension",
+        "$description": "Innenabstand sm",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "md": {
+        "$type": "dimension",
+        "$description": "Innenabstand md",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "lg": {
+        "$type": "dimension",
+        "$description": "Innenabstand lg",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "xl": {
+        "$type": "dimension",
+        "$description": "Innenabstand xl",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      }
+    },
+    "stack": {
+      "xs": {
+        "$type": "dimension",
+        "$description": "vertikaler Abstand xs",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "sm": {
+        "$type": "dimension",
+        "$description": "vertikaler Abstand sm",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "md": {
+        "$type": "dimension",
+        "$description": "vertikaler Abstand md",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "lg": {
+        "$type": "dimension",
+        "$description": "vertikaler Abstand lg",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "xl": {
+        "$type": "dimension",
+        "$description": "vertikaler Abstand xl",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      }
+    },
+    "inline": {
+      "xs": {
+        "$type": "dimension",
+        "$description": "horizontaler Abstand xs",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "sm": {
+        "$type": "dimension",
+        "$description": "horizontaler Abstand sm",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "md": {
+        "$type": "dimension",
+        "$description": "horizontaler Abstand md",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "lg": {
+        "$type": "dimension",
+        "$description": "horizontaler Abstand lg",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      }
+    },
+    "layout": {
+      "gutter": {
+        "$type": "dimension",
+        "$description": "Seitenrand (mobil ≥ 16 px)",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "section": {
+        "$type": "dimension",
+        "$description": "Abstand zwischen Seitenabschnitten",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      }
+    }
+  },
+  "size": {
+    "target": {
+      "min": {
+        "$type": "dimension",
+        "$description": "Touch-Mindestziel (≥ 44 px)",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "min-pointer": {
+        "$type": "dimension",
+        "$description": "Minimum dichte Zeiger-UI (≥ 24 px)",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      }
+    },
+    "control": {
+      "sm": {
+        "$type": "dimension",
+        "$description": "Höhe Controls sm",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "md": {
+        "$type": "dimension",
+        "$description": "Höhe Controls md",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "lg": {
+        "$type": "dimension",
+        "$description": "Höhe Controls lg",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      }
+    },
+    "icon": {
+      "sm": {
+        "$type": "dimension",
+        "$description": "Icongröße sm",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "md": {
+        "$type": "dimension",
+        "$description": "Icongröße md",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "lg": {
+        "$type": "dimension",
+        "$description": "Icongröße lg",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      }
+    },
+    "container": {
+      "sm": {
+        "$type": "dimension",
+        "$description": "max. Inhaltsbreite sm",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "md": {
+        "$type": "dimension",
+        "$description": "max. Inhaltsbreite md",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "lg": {
+        "$type": "dimension",
+        "$description": "max. Inhaltsbreite lg",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "xl": {
+        "$type": "dimension",
+        "$description": "max. Inhaltsbreite xl",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      }
+    }
+  },
+  "radius": {
+    "control": {
+      "$type": "dimension",
+      "$description": "Buttons, Inputs",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    },
+    "container": {
+      "$type": "dimension",
+      "$description": "Karten, Panels",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    },
+    "overlay": {
+      "$type": "dimension",
+      "$description": "Dialoge, Popover",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    },
+    "pill": {
+      "$type": "dimension",
+      "$description": "vollständig rund",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    }
+  },
+  "border": {
+    "width": {
+      "default": {
+        "$type": "dimension",
+        "$description": "Standardlinie",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "strong": {
+        "$type": "dimension",
+        "$description": "betonte Linie",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      },
+      "focus": {
+        "$type": "dimension",
+        "$description": "Fokusring (≥ 2 px)",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      }
+    },
+    "offset": {
+      "focus": {
+        "$type": "dimension",
+        "$description": "Abstand Fokusring",
+        "$extensions": {
+          "pds": {
+            "required": true
+          }
+        }
+      }
+    }
+  },
+  "elevation": {
+    "flat": {
+      "$type": "shadow",
+      "$description": "Ebene 0",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    },
+    "raised": {
+      "$type": "shadow",
+      "$description": "Ebene 1: Karten",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    },
+    "floating": {
+      "$type": "shadow",
+      "$description": "Ebene 2: Dropdown, Sticky",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    },
+    "overlay": {
+      "$type": "shadow",
+      "$description": "Ebene 3: Dialog, Drawer",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    },
+    "toast": {
+      "$type": "shadow",
+      "$description": "Ebene 4: Toast",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    }
+  },
+  "opacity": {
+    "scrim": {
+      "$type": "number",
+      "$description": "Deckkraft Scrim",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    },
+    "disabled": {
+      "$type": "number",
+      "$description": "nur nicht-textliche Elemente",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    }
+  },
+  "duration": {
+    "instant": {
+      "$type": "duration",
+      "$description": "0 ms",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    },
+    "fast": {
+      "$type": "duration",
+      "$description": "Hover, Fokus",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    },
+    "base": {
+      "$type": "duration",
+      "$description": "Aufklappen",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    },
+    "slow": {
+      "$type": "duration",
+      "$description": "Dialog, Drawer",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    },
+    "deliberate": {
+      "$type": "duration",
+      "$description": "bewusst langsam, sparsam",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    }
+  },
+  "easing": {
+    "standard": {
+      "$type": "cubicBezier",
+      "$description": "Bewegung im Bildschirm",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    },
+    "enter": {
+      "$type": "cubicBezier",
+      "$description": "Erscheinen",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    },
+    "exit": {
+      "$type": "cubicBezier",
+      "$description": "Verschwinden",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    }
+  },
+  "breakpoint": {
+    "sm": {
+      "$type": "dimension",
+      "$description": "Mindestbreite sm",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    },
+    "md": {
+      "$type": "dimension",
+      "$description": "Mindestbreite md",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    },
+    "lg": {
+      "$type": "dimension",
+      "$description": "Mindestbreite lg",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    },
+    "xl": {
+      "$type": "dimension",
+      "$description": "Mindestbreite xl",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    }
+  },
+  "z": {
+    "base": {
+      "$type": "number",
+      "$description": "Ebene base",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    },
+    "raised": {
+      "$type": "number",
+      "$description": "Ebene raised",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    },
+    "dropdown": {
+      "$type": "number",
+      "$description": "Ebene dropdown",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    },
+    "sticky": {
+      "$type": "number",
+      "$description": "Ebene sticky",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    },
+    "overlay": {
+      "$type": "number",
+      "$description": "Ebene overlay",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    },
+    "modal": {
+      "$type": "number",
+      "$description": "Ebene modal",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    },
+    "popover": {
+      "$type": "number",
+      "$description": "Ebene popover",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    },
+    "toast": {
+      "$type": "number",
+      "$description": "Ebene toast",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    },
+    "tooltip": {
+      "$type": "number",
+      "$description": "Ebene tooltip",
+      "$extensions": {
+        "pds": {
+          "required": true
+        }
+      }
+    }
+  }
+}

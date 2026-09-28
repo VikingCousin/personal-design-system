@@ -1,0 +1,43 @@
+# Betriebssystem
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+
+# Secrets und lokale Zugangsdaten
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+credentials*.json
+secrets*.json
+
+# Lokale Claude-/AI- und Editor-Einstellungen
+.claude/settings.local.json
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs, Caches, temporäre Dateien
+*.log
+*.tmp
+*.bak
+.cache/
+tmp/
+node_modules/
+
+# Lokale Datenbanken
+*.sqlite
+*.sqlite3
+*.db
+
+# Private Projekte (nicht öffentlich)
+# Das Pilotprojekt enthält eine vertrauliche Geschäftsidee und bleibt nur lokal.
+projects/digital-legacy/

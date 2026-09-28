@@ -1,0 +1,189 @@
+<!doctype html>
+<!--
+  Quelldatei für PERSONAL-DESIGN-SYSTEM-QUICKSTART.pdf (Root des Systems).
+  PDF neu erzeugen (macOS, aus dem Ordner personal-design-system/):
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --disable-gpu --no-pdf-header-footer \
+    --print-to-pdf=PERSONAL-DESIGN-SYSTEM-QUICKSTART.pdf quickstart/PERSONAL-DESIGN-SYSTEM-QUICKSTART.html
+  Inhalt bei neuen Core-Versionen gegen README.md, core/agent-skill/SKILL.md und core/process/project-workflow.md prüfen.
+-->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Personal Design System · Quick Start</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+@page { size: A4; margin: 0; }
+:root {
+  --ink: #15171C;
+  --ink-2: #5A606B;
+  --line: #E2E4E9;
+  --soft: #F4F5F7;
+  --accent: #2447D6;
+  --accent-soft: #EEF1FD;
+  --sans: "IBM Plex Sans", -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 210mm; height: 297mm; background: #fff; }
+body {
+  font-family: var(--sans); color: var(--ink); font-size: 9.6pt; line-height: 1.45;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+.page { width: 210mm; height: 297mm; padding: 15mm 16mm 12mm; display: flex; flex-direction: column; }
+
+.eyebrow { font-family: var(--mono); font-size: 7.6pt; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2); }
+.label { font-size: 7.6pt; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 2.2mm; }
+
+/* Kopf: Titel + Architektur */
+.top { display: grid; grid-template-columns: 1fr 78mm; gap: 10mm; align-items: start; }
+h1 { font-size: 30pt; font-weight: 500; line-height: 1.02; letter-spacing: -.02em; margin: 3mm 0 5mm; }
+.def { font-size: 10.5pt; line-height: 1.5; max-width: 88mm; }
+.def b { font-weight: 600; }
+.def p + p { margin-top: 2mm; }
+.diagram svg { width: 78mm; height: auto; display: block; }
+
+/* Beispiel-Prompt */
+.prompt { margin-top: 8mm; background: var(--accent); color: #fff; border-radius: 3mm; padding: 5.5mm 7mm 6mm; }
+.prompt .label { color: rgba(255,255,255,.8); }
+.prompt q { display: block; font-size: 14pt; line-height: 1.35; font-weight: 500; quotes: "„" "“"; }
+.prompt .hint { margin-top: 2.5mm; font-size: 8.4pt; color: rgba(255,255,255,.85); }
+
+/* Ablauf */
+.flow { margin-top: 7mm; }
+.steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2.2mm; counter-reset: s; }
+.step { position: relative; border: 0.3mm solid var(--line); border-radius: 2mm; padding: 2.4mm 2.6mm 2.6mm; min-height: 15mm; display: flex; flex-direction: column; justify-content: space-between; }
+.step::before { counter-increment: s; content: counter(s, decimal-leading-zero); font-family: var(--mono); font-size: 7pt; color: var(--ink-2); }
+.step span { font-size: 8.8pt; font-weight: 500; line-height: 1.2; margin-top: 1mm; }
+.step i { position: absolute; top: 2.2mm; right: 2.4mm; font-style: normal; font-family: var(--mono); font-size: 6.6pt; color: var(--accent); border: 0.25mm solid var(--accent); border-radius: 1mm; padding: 0 .9mm; line-height: 1.5; }
+.step.me { background: var(--accent-soft); border-color: var(--accent); }
+.step.me span { color: var(--accent); font-weight: 600; }
+.flow .note { margin-top: 2.6mm; font-size: 8.3pt; color: var(--ink-2); }
+.flow .note b { color: var(--ink); font-weight: 600; }
+
+/* Core vs Projekt */
+.cols { margin-top: 7mm; display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; }
+.col h2 { font-size: 12pt; font-weight: 600; margin-bottom: .6mm; }
+.col .path { font-family: var(--mono); font-size: 7.6pt; color: var(--ink-2); margin-bottom: 2.6mm; }
+.col ul { list-style: none; columns: 2; column-gap: 5mm; }
+.col li { font-size: 9.2pt; padding: 1.1mm 0; border-top: 0.25mm solid var(--line); break-inside: avoid; }
+
+/* Grundregel */
+.rule { margin-top: auto; background: var(--ink); color: #fff; border-radius: 3mm; padding: 6mm 7mm; }
+.rule p.label { color: #9FB2FF; font-size: 7.6pt; line-height: 1.45; font-weight: 600; }
+.rule p { font-size: 13pt; line-height: 1.4; font-weight: 500; }
+.rule p em { font-style: normal; color: #9FB2FF; }
+
+.foot { margin-top: 4mm; display: flex; justify-content: space-between; font-family: var(--mono); font-size: 7.2pt; color: var(--ink-2); }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <section class="top">
+    <div>
+      <p class="eyebrow">Personal Design System · Quick Start</p>
+      <h1>Ein System.<br>Viele Marken.</h1>
+      <div class="def">
+        <p><b>Core</b> enthält die projektunabhängigen Regeln und Qualitätsstandards.</p>
+        <p><b>Projects</b> enthalten die individuellen Marken und Designs einzelner Projekte.</p>
+      </div>
+    </div>
+    <figure class="diagram" aria-label="Architektur: Core versorgt drei Projekte mit je eigener Marke">
+      <svg viewBox="0 0 300 206" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, Helvetica, Arial, sans-serif">
+        <rect x="1" y="1" width="298" height="204" rx="10" fill="#F4F5F7"/>
+        <text x="150" y="20" text-anchor="middle" font-family="IBM Plex Mono, Menlo, monospace" font-size="8.5" letter-spacing="1.6" fill="#5A606B">PERSONAL DESIGN SYSTEM</text>
+        <rect x="90" y="30" width="120" height="44" rx="7" fill="#2447D6"/>
+        <text x="150" y="51" text-anchor="middle" font-size="15" font-weight="600" fill="#fff" letter-spacing="1.5">CORE</text>
+        <text x="150" y="65" text-anchor="middle" font-size="7.6" fill="#DCE3FF">Regeln · Qualität · Prozess</text>
+        <g stroke="#2447D6" stroke-width="1.4" fill="none">
+          <path d="M150 74 V92"/>
+          <path d="M52 92 H248"/>
+          <path d="M52 92 V110"/><path d="M150 92 V110"/><path d="M248 92 V110"/>
+        </g>
+        <g fill="#2447D6"><path d="M48 106 l4 6 4 -6z"/><path d="M146 106 l4 6 4 -6z"/><path d="M244 106 l4 6 4 -6z"/></g>
+        <g font-size="10" font-weight="600" fill="#15171C" text-anchor="middle">
+          <rect x="12" y="114" width="80" height="80" rx="7" fill="#fff" stroke="#E2E4E9"/>
+          <rect x="110" y="114" width="80" height="80" rx="7" fill="#fff" stroke="#E2E4E9"/>
+          <rect x="208" y="114" width="80" height="80" rx="7" fill="#fff" stroke="#E2E4E9"/>
+          <text x="52" y="136">Anhänger-</text><text x="52" y="148">verleih</text>
+          <text x="150" y="136">Digital</text><text x="150" y="148">Legacy</text>
+          <text x="248" y="142">SaaS</text>
+        </g>
+        <g stroke="#E2E4E9"><path d="M22 160 H82"/><path d="M120 160 H180"/><path d="M218 160 H278"/></g>
+        <g font-size="8.4" fill="#5A606B" text-anchor="middle">
+          <text x="52" y="178">eigene Marke</text><text x="150" y="178">eigene Marke</text><text x="248" y="178">eigene Marke</text>
+        </g>
+      </svg>
+    </figure>
+  </section>
+
+  <section class="prompt">
+    <p class="label">So startest du ein neues Projekt · sag zu Claude</p>
+    <q>Ich möchte einen Anhängerverleih in Aalen aufbauen. Lege dafür ein neues Projekt an und verwende mein Personal Design System.</q>
+    <p class="hint">Claude legt <span style="font-family:var(--mono)">projects/&lt;name&gt;/</span> aus der Projektvorlage an und führt dich durch diesen Ablauf.</p>
+  </section>
+
+  <section class="flow">
+    <p class="label">Der Ablauf</p>
+    <div class="steps">
+      <div class="step"><span>Core lesen</span></div>
+      <div class="step"><i>G0</i><span>Projekt anlegen</span></div>
+      <div class="step"><i>G1</i><span>Brief</span></div>
+      <div class="step"><i>G2</i><span>Brand Foundation</span></div>
+      <div class="step"><span>Creative Direction / Brand-Import</span></div>
+      <div class="step me"><i>G3</i><span>Meine Freigabe</span></div>
+      <div class="step"><i>G4</i><span>Project Tokens</span></div>
+      <div class="step"><span>Components</span></div>
+      <div class="step"><i>G5</i><span>Templates</span></div>
+      <div class="step"><span>Quality Check</span></div>
+    </div>
+    <p class="note"><b>G = Gate:</b> Claude stoppt und wartet auf deine Freigabe. Name, Richtung, Farben, Schriften, Logo, Anrede, Preise und Veröffentlichung (G6) entscheidest immer du. Kleine Projekte laufen kompakt (Tiefe S), überspringen aber kein Gate.</p>
+  </section>
+
+  <section class="cols">
+    <div class="col">
+      <h2>Was kommt aus Core?</h2>
+      <p class="path">core/</p>
+      <ul>
+        <li>Accessibility</li>
+        <li>Responsive-Regeln</li>
+        <li>Token-Architektur</li>
+        <li>Komponentenlogik</li>
+        <li>Template-Systematik</li>
+        <li>Qualitätsstandards</li>
+        <li>Projektprozess</li>
+        <li>Claude-/Agent-Regeln</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h2>Was entsteht pro Projekt neu?</h2>
+      <p class="path">projects/&lt;name&gt;/</p>
+      <ul>
+        <li>Markenidentität</li>
+        <li>Farben</li>
+        <li>Typografie</li>
+        <li>Logo</li>
+        <li>Bildsprache</li>
+        <li>Creative Direction</li>
+        <li>Project Tokens</li>
+        <li>eigene Components</li>
+        <li>eigene Templates</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="rule">
+    <p class="label">Grundregel</p>
+    <p>Core ist das dauerhafte System. Projects sind Anwendungen davon.<br><em>Ein einzelnes Projekt verändert Core niemals stillschweigend.</em></p>
+  </section>
+
+  <footer class="foot">
+    <span>Personal Design System v1.0 · Core 1.0.0</span>
+    <span>Mehr: README.md · core/agent-skill/SKILL.md</span>
+  </footer>
+
+</main>
+</body>
+</html>
