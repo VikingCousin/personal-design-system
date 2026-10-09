@@ -29,7 +29,19 @@
 
 **Claude:** prüft nach `process/promotion.md`. Ergebnis zum Beispiel: gilt für B2C und B2B unterschiedlich, deshalb als bedingte Regel in `templates/marketing-page.md` („MwSt.-Angabe je Zielgruppe klar kennzeichnen“). Schlägt Formulierung und Ort vor und setzt erst nach Freigabe um, mit CHANGELOG-Eintrag und PATCH/MINOR-Version.
 
-## 5. „Mach einfach“
+## 5. Kanalauftrag
+
+> „Erstelle einen Pinterest Pin für Projekt X gemäß meinem Design System.“
+
+**Claude:** findet `projects/x/`, liest `brand-kit/brand-kit.json` (Version, Status), prüft, ob `pinterest_pin` als Kanal angelegt ist, fragt nach Thema, Ziel-URL und Bild, trägt die Inhalte ein, erzeugt den Pin mit dem Generator und meldet das Ergebnis der Konsistenzprüfung. Gibt es kein Brand Kit, erfindet Claude keine Farben oder Logos, sondern schlägt den Aufbau bzw. Import vor.
+
+## 6. AI Brand Context Pack
+
+> „Exportiere das AI Brand Context Pack für Projekt X.“
+
+**Claude:** erzeugt Brand Kit und Paket, berichtet Status, offene Punkte und `EXPORT-CHECK.md` und lädt nichts hoch (G6).
+
+## 7. „Mach einfach“
 
 > „Mach einfach eine schöne Website für meinen Verleih, ich hab keine Zeit.“
 

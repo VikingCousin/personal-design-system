@@ -1,0 +1,25 @@
+<!doctype html>
+<!-- PDS Starter · Instagram Story 9:16 · pds:size 1080x1920 · Regeln: core/templates/social-media.md · Maße vor Produktion verifizieren -->
+<html lang="de"><head><meta charset="utf-8"><title>{{kit:meta.name}} · Instagram Story 9:16 (Starter)</title>{{css}}
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:1080px;height:1920px;overflow:hidden}
+body{position:relative;font-family:var(--font-family-body);color:var(--color-text-inverse);background:var(--color-brand-primary)}
+.pds-demo-banner{position:absolute;top:0;left:0;right:0;z-index:9;background:var(--color-bg-inverse);color:var(--color-text-inverse);font:700 22px var(--font-family-body);letter-spacing:.06em;text-align:center;padding:12px}
+.pds-open{display:inline-block;background:var(--color-feedback-warning-bg);color:var(--color-feedback-warning-text);border:2px dashed var(--color-feedback-warning-border);border-radius:6px;padding:2px 10px;font-family:var(--font-family-body)}
+.frame{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:260px 88px 300px}
+.label:empty{visibility:hidden}
+.label{align-self:flex-start;font:700 24px var(--font-family-body);background:var(--color-bg-canvas);color:var(--color-text-primary);padding:6px 14px;border-radius:var(--radius-control)}
+.eyebrow{font:600 34px/1.2 var(--font-family-body);margin:0 0 24px;opacity:.9}
+h1{font-family:var(--font-family-display);font-size:112px;line-height:1.05;margin:0 0 28px;font-weight:700;letter-spacing:-.01em}
+p.body{font-size:38px;line-height:1.35;margin:0;max-width:24ch}
+.cta{display:inline-block;margin-top:44px;font:700 36px var(--font-family-body);background:var(--color-bg-canvas);color:var(--color-text-primary);padding:22px 36px;border-radius:var(--radius-control)}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:24px;font-size:28px}
+.logo{height:64px;width:auto}
+/* obere und untere Bereiche bleiben frei (Plattform-UI) */
+</style></head><body>
+{{demo_banner}}
+<div class="frame">
+<div class="label">{{opt:channels.instagram_story.sample.label}}</div>
+<div><p class="eyebrow">{{kit:channels.instagram_story.sample.eyebrow}}</p><h1>{{kit:channels.instagram_story.sample.headline}}</h1><p class="body">{{kit:channels.instagram_story.sample.body}}</p><span class="cta">{{kit:channels.instagram_story.sample.cta}}</span></div>
+<div class="foot">{{logo:negative}}<span>{{kit:channels.instagram_story.sample.url}}</span></div>
+</div></body></html>

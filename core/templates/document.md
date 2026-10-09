@@ -1,5 +1,7 @@
 # Template: Dokument (Core)
 
+> Token-Zuordnung, Logo- und CTA-Regeln, Pre-Production-Check und Export: [cross-channel.md](cross-channel.md) · Starter: `core/brand-kit/generator/starters/document-offer.html`
+
 ## Zweck
 Schriftliche Dokumente, die gelesen, gedruckt oder weitergegeben werden: Angebot, Bericht, Konzept, Rechnung, Brief, Handout. Ausgabe als DOCX, PDF oder Online-Dokument.
 

@@ -18,6 +18,7 @@ projects/<projekt-name>/
 ├── brief/             PFLICHT · BRIEF.md (Source of Truth)
 ├── brand/             PFLICHT ab Phase 2 · foundation.md, voice.md, visual-direction.md
 ├── tokens/            PFLICHT ab Phase 5 · *.tokens.json + README.md
+├── brand-kit/         PFLICHT ab Phase 5 · brand-kit.json (Vorlage: alles OPEN, verweist auf ../tokens/ und ../assets/); Ausgaben dist/ und ai-pack/ werden erzeugt
 ├── components/        PFLICHT ab Phase 6 · Projekt-Specs, Abweichungen von Core
 ├── templates/         PFLICHT ab Phase 7 · gebrandete Templates
 ├── assets/            PFLICHT ab Phase 5 · logos/, icons/, fonts/, images/

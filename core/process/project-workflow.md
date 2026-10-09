@@ -11,9 +11,9 @@
 | 2 | **Brand Foundation** | `brand/foundation.md`, `brand/voice.md` | G2 · Arbeitsfreigabe Foundation |
 | 3 | **Research** *(bei Bedarf, auch parallel)* | `research/RESEARCH-AGENDA.md`, Befunde | — |
 | 4 | **Creative Direction** | 2–3 Richtungen + Style-Tiles in `prototypes/`, Bewertung | G3 · Richtung gewählt |
-| 5 | **Tokens** | `tokens/*.tokens.json` + `tokens/README.md` (Kontraste, Lizenzen) | G4 · Tokens freigegeben |
+| 5 | **Tokens & Brand Kit** | 5a `tokens/*.tokens.json` + `tokens/README.md` (Kontraste, Lizenzen) · 5b `brand-kit/brand-kit.json` → `brand-kit/dist/` (BRAND-KIT.html/.pdf, QA-Bericht), optional AI Brand Context Pack ([brand-kit](../brand-kit/README.md)) | G4 · Tokens und Brand Kit freigegeben |
 | 6 | **Components** | Umsetzung der Core-Komponenten + Projektkomponenten | G5 · Komponenten freigegeben |
-| 7 | **Templates** | gebrandete Templates (Web, App, Dokument, Präsentation …) | G5 · Templates freigegeben |
+| 7 | **Templates** | gebrandete Templates und Kanal-Vorlagen (Web, App, Social, Newsletter, Dokument, Präsentation …) nach der [Cross-Channel-Matrix](../templates/cross-channel.md) | G5 · Templates freigegeben |
 | 8 | **Anwendung / Release** | Website, App, Dokumente, Brand-Guideline | G6 · Veröffentlichung |
 
 Die Gates sind in [agent-skill/rules/approval-gates.md](../agent-skill/rules/approval-gates.md) genau beschrieben.
@@ -30,6 +30,7 @@ Im Setup wählt der Nutzer (Claude schlägt vor) eine Tiefe:
 | Research | Desk: 3–5 Wettbewerber bzw. Vorbilder | gezielt für offene Fragen | Research-Agenda (Desk, User, Partner, Legal, Tech) |
 | Creative Direction | 2 Richtungen **oder** 1 Richtung mit 2 Varianten | 2–3 Richtungen | 3 Richtungen + Tests mit Nutzenden |
 | Tokens | Pflichtvertrag | Pflichtvertrag + Ergänzungen | + Modi, Themes, Material, Print |
+| Brand Kit | Pflichtabschnitte, 1–3 Kanäle | alle genutzten Kanäle | alle Kanäle + Druckwerte + Referenz-Assets |
 | Components | Core-Komponenten ohne eigene Specs | + Projekt-Specs für Abweichungen | + projektspezifische Komponenten-Bibliothek |
 | Templates | 1–2 | nach Bedarf | vollständiges Set + Brand-Guideline |
 | Gates | G1+G2 und G4+G5 dürfen gebündelt werden | alle | alle, schriftlich im Log |
@@ -49,6 +50,8 @@ Im Setup wählt der Nutzer (Claude schlägt vor) eine Tiefe:
 | **Wann ist Research nötig?** | Wenn eine offene Entscheidung ohne Evidenz nur geraten wäre (Zielgruppe unklar, Wettbewerb unbekannt, Recht oder Technik betroffen, sensible Themen). In Tiefe S genügt kurze Desk-Recherche. Behauptungen ohne Quelle werden als ANNAHME markiert. |
 | **Wann Creative Directions?** | Wenn die visuelle Identität neu entsteht oder grundlegend geändert wird, und erst **nach G2** (Foundation). Bei bestehender Marke: Brand-Import. |
 | **Wann Tokens?** | Erst **nach G3** (Richtung gewählt). Werte aus Explorationen sind nur Arbeitswerte. |
+| **Wann Brand Kit?** | Direkt nach den Tokens, vor G4. Es verweist auf die Tokens und kopiert keine Werte. Offenes bleibt OPEN; `FREIGEGEBEN` setzt nur der Nutzer mit G4. |
+| **Wann Kanal-Ausgaben (Social, Newsletter …)?** | Erst nach G4 und nur aus dem Brand Kit. Ohne freigegebenes Kit nur als Entwurf gekennzeichnet, nie mit erfundener Identität. |
 | **Wann Components?** | Nach G4. Zuerst die Core-Komponenten, die die Templates brauchen, dann Projektkomponenten. |
 | **Wann Templates?** | Wenn die benötigten Komponenten stehen. In Tiefe S dürfen Komponenten direkt im ersten Template entstehen, müssen aber Core-Regeln erfüllen. |
 | **Wann ist ein Projekt „fertig“?** | Wenn die im Setup vereinbarten Ergebnisse vorliegen und die [Qualitätsprüfung](../principles/quality-standards.md) bestanden ist. |

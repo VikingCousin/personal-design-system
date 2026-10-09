@@ -1,5 +1,7 @@
 # Template: Marketingseite / Unterseite (Core)
 
+> Token-Zuordnung, Logo- und CTA-Regeln, Pre-Production-Check und Export: [cross-channel.md](cross-channel.md) · Starter: `core/brand-kit/generator/starters/website.html`
+
 ## Zweck
 Vertieft **ein Thema** (Leistung, Produkt, Preise, Über uns, Kontakt) und führt zur Hauptaktion.
 

@@ -37,23 +37,23 @@ body {
 .label { font-size: 7.6pt; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 2.2mm; }
 
 /* Kopf: Titel + Architektur */
-.top { display: grid; grid-template-columns: 1fr 78mm; gap: 10mm; align-items: start; }
-h1 { font-size: 30pt; font-weight: 500; line-height: 1.02; letter-spacing: -.02em; margin: 3mm 0 5mm; }
+.top { display: grid; grid-template-columns: 1fr 66mm; gap: 10mm; align-items: start; }
+h1 { font-size: 27pt; font-weight: 500; line-height: 1.02; letter-spacing: -.02em; margin: 2mm 0 3.5mm; }
 .def { font-size: 10.5pt; line-height: 1.5; max-width: 88mm; }
 .def b { font-weight: 600; }
-.def p + p { margin-top: 2mm; }
-.diagram svg { width: 78mm; height: auto; display: block; }
+.def p + p { margin-top: 1.2mm; }
+.diagram svg { width: 66mm; height: auto; display: block; }
 
 /* Beispiel-Prompt */
-.prompt { margin-top: 8mm; background: var(--accent); color: #fff; border-radius: 3mm; padding: 5.5mm 7mm 6mm; }
+.prompt { margin-top: 5mm; background: var(--accent); color: #fff; border-radius: 3mm; padding: 4.2mm 7mm 4.5mm; }
 .prompt .label { color: rgba(255,255,255,.8); }
-.prompt q { display: block; font-size: 14pt; line-height: 1.35; font-weight: 500; quotes: "„" "“"; }
+.prompt q { display: block; font-size: 13pt; line-height: 1.35; font-weight: 500; quotes: "„" "“"; }
 .prompt .hint { margin-top: 2.5mm; font-size: 8.4pt; color: rgba(255,255,255,.85); }
 
 /* Ablauf */
-.flow { margin-top: 7mm; }
+.flow { margin-top: 5.5mm; }
 .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2.2mm; counter-reset: s; }
-.step { position: relative; border: 0.3mm solid var(--line); border-radius: 2mm; padding: 2.4mm 2.6mm 2.6mm; min-height: 15mm; display: flex; flex-direction: column; justify-content: space-between; }
+.step { position: relative; border: 0.3mm solid var(--line); border-radius: 2mm; padding: 2.4mm 2.6mm 2.6mm; min-height: 12.5mm; display: flex; flex-direction: column; justify-content: space-between; }
 .step::before { counter-increment: s; content: counter(s, decimal-leading-zero); font-family: var(--mono); font-size: 7pt; color: var(--ink-2); }
 .step span { font-size: 8.8pt; font-weight: 500; line-height: 1.2; margin-top: 1mm; }
 .step i { position: absolute; top: 2.2mm; right: 2.4mm; font-style: normal; font-family: var(--mono); font-size: 6.6pt; color: var(--accent); border: 0.25mm solid var(--accent); border-radius: 1mm; padding: 0 .9mm; line-height: 1.5; }
@@ -63,16 +63,26 @@ h1 { font-size: 30pt; font-weight: 500; line-height: 1.02; letter-spacing: -.02e
 .flow .note b { color: var(--ink); font-weight: 600; }
 
 /* Core vs Projekt */
-.cols { margin-top: 7mm; display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; }
-.col h2 { font-size: 12pt; font-weight: 600; margin-bottom: .6mm; }
-.col .path { font-family: var(--mono); font-size: 7.6pt; color: var(--ink-2); margin-bottom: 2.6mm; }
+.cols { margin-top: 5.5mm; display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; }
+.col h2 { font-size: 11.5pt; font-weight: 600; margin-bottom: 1.5mm; display: flex; justify-content: space-between; align-items: baseline; }
+.col .path { font-family: var(--mono); font-size: 7.4pt; color: var(--ink-2); font-weight: 400; }
 .col ul { list-style: none; columns: 2; column-gap: 5mm; }
-.col li { font-size: 9.2pt; padding: 1.1mm 0; border-top: 0.25mm solid var(--line); break-inside: avoid; }
+.col li { font-size: 9pt; padding: .7mm 0; border-top: 0.25mm solid var(--line); break-inside: avoid; }
+
+
+/* AI Brand Context Pack */
+.ai { margin-top: 5mm; border: 0.3mm solid var(--line); border-radius: 3mm; padding: 3.2mm 5mm 3.4mm; }
+.ai h2 { font-size: 11pt; font-weight: 600; margin-bottom: 1.8mm; }
+.ai .q3 { display: grid; grid-template-columns: 1.15fr 1fr 1fr; gap: 5mm; }
+.ai h3 { font-size: 8.6pt; font-weight: 600; color: var(--accent); margin-bottom: 1.2mm; }
+.ai p, .ai li { font-size: 8.3pt; line-height: 1.4; }
+.ai ol { padding-left: 4mm; }
+.ai code { white-space: nowrap; font-family: var(--mono); font-size: 7.4pt; background: var(--soft); padding: .2mm 1mm; border-radius: 1mm; }
 
 /* Grundregel */
-.rule { margin-top: auto; background: var(--ink); color: #fff; border-radius: 3mm; padding: 6mm 7mm; }
-.rule p.label { color: #9FB2FF; font-size: 7.6pt; line-height: 1.45; font-weight: 600; }
-.rule p { font-size: 13pt; line-height: 1.4; font-weight: 500; }
+.rule { margin-top: 5mm; background: var(--ink); color: #fff; border-radius: 3mm; padding: 3.4mm 7mm; }
+.rule p.label { color: #9FB2FF; font-size: 7.6pt; line-height: 1.45; font-weight: 600; margin-bottom: 1.2mm; }
+.rule p { font-size: 12pt; line-height: 1.4; font-weight: 500; }
 .rule p em { font-style: normal; color: #9FB2FF; }
 
 .foot { margin-top: 4mm; display: flex; justify-content: space-between; font-family: var(--mono); font-size: 7.2pt; color: var(--ink-2); }
@@ -134,18 +144,17 @@ h1 { font-size: 30pt; font-weight: 500; line-height: 1.02; letter-spacing: -.02e
       <div class="step"><i>G2</i><span>Brand Foundation</span></div>
       <div class="step"><span>Creative Direction / Brand-Import</span></div>
       <div class="step me"><i>G3</i><span>Meine Freigabe</span></div>
-      <div class="step"><i>G4</i><span>Project Tokens</span></div>
+      <div class="step"><i>G4</i><span>Project Tokens &amp; Brand Kit</span></div>
       <div class="step"><span>Components</span></div>
-      <div class="step"><i>G5</i><span>Templates</span></div>
+      <div class="step"><i>G5</i><span>Templates &amp; Kanäle</span></div>
       <div class="step"><span>Quality Check</span></div>
     </div>
-    <p class="note"><b>G = Gate:</b> Claude stoppt und wartet auf deine Freigabe. Name, Richtung, Farben, Schriften, Logo, Anrede, Preise und Veröffentlichung (G6) entscheidest immer du. Kleine Projekte laufen kompakt (Tiefe S), überspringen aber kein Gate.</p>
+    <p class="note"><b>G = Gate:</b> Claude stoppt und wartet auf deine Freigabe. Name, Richtung, Farben, Schriften, Logo, Anrede, Preise und Veröffentlichung (G6) entscheidest immer du.</p>
   </section>
 
   <section class="cols">
     <div class="col">
-      <h2>Was kommt aus Core?</h2>
-      <p class="path">core/</p>
+      <h2>Was kommt aus Core? <span class="path">core/</span></h2>
       <ul>
         <li>Accessibility</li>
         <li>Responsive-Regeln</li>
@@ -158,8 +167,7 @@ h1 { font-size: 30pt; font-weight: 500; line-height: 1.02; letter-spacing: -.02e
       </ul>
     </div>
     <div class="col">
-      <h2>Was entsteht pro Projekt neu?</h2>
-      <p class="path">projects/&lt;name&gt;/</p>
+      <h2>Was entsteht pro Projekt neu? <span class="path">projects/&lt;name&gt;/</span></h2>
       <ul>
         <li>Markenidentität</li>
         <li>Farben</li>
@@ -167,10 +175,22 @@ h1 { font-size: 30pt; font-weight: 500; line-height: 1.02; letter-spacing: -.02e
         <li>Logo</li>
         <li>Bildsprache</li>
         <li>Creative Direction</li>
-        <li>Project Tokens</li>
+        <li>Project Tokens &amp; Brand Kit</li>
         <li>eigene Components</li>
         <li>eigene Templates</li>
       </ul>
+    </div>
+  </section>
+
+  <section class="ai">
+    <h2>Brand Kit für ChatGPT &amp; andere KI-Tools</h2>
+    <div class="q3">
+      <div><h3>Wie exportiere ich?</h3>
+        <p>Sag zu Claude: „Exportiere das AI Brand Context Pack für Projekt X.“ Ergebnis: <code>brand-kit/ai-pack/</code> mit Prüfbericht.</p></div>
+      <div><h3>Was lade ich hoch?</h3>
+        <p><code>AI-BRAND-CONTEXT.md</code> · <code>brand-tokens.json</code> · optional <code>BRAND-KIT.pdf</code> und Logo aus <code>assets/</code>. Den Bildprompt nur kopieren.</p></div>
+      <div><h3>Wie bleibt alles synchron?</h3>
+        <p>Quelle bleibt <code>brand-kit.json</code>. Nach Änderungen neu exportieren und im KI-Tool <b>alle</b> alten Dateien ersetzen. Hochladen nur nach deiner Freigabe (G6).</p></div>
     </div>
   </section>
 
@@ -180,8 +200,8 @@ h1 { font-size: 30pt; font-weight: 500; line-height: 1.02; letter-spacing: -.02e
   </section>
 
   <footer class="foot">
-    <span>Personal Design System v1.0 · Core 1.0.0</span>
-    <span>Mehr: README.md · core/agent-skill/SKILL.md</span>
+    <span>Personal Design System v1.1 · Core 1.1.0</span>
+    <span>Mehr: README.md</span>
   </footer>
 
 </main>

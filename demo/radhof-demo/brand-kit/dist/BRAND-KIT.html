@@ -1,0 +1,193 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PDS Brand-Kit-Generator 1.1.0">
+<title>Brand Kit · Radhof (Demo) · v0.1.0</title>
+<link rel="stylesheet" href="brand.css"><style>
+:root{--c-ink:#16181d;--c-ink-2:#4f5561;--c-line:#dfe2e7;--c-soft:#f5f6f8;--c-bg:#fff;--c-open:#8a4b00;--c-open-bg:#fff4e0;--c-ok:#1f6b3a;--c-ok-bg:#e7f5ec;--c-wip:#3c4fb0;--c-wip-bg:#eceffd}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--c-bg);color:var(--c-ink);font:16px/1.55 -apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+a{color:inherit}:focus-visible{outline:3px solid var(--c-wip);outline-offset:2px}
+.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:16px;background:#fff;padding:8px 12px;z-index:10}
+.layout{display:grid;grid-template-columns:240px minmax(0,1fr);min-height:100vh}
+nav.side{position:sticky;top:0;height:100vh;overflow:auto;border-right:1px solid var(--c-line);padding:28px 20px;background:var(--c-soft)}
+nav.side .kit{font-weight:700;margin:0 0 4px}nav.side .ver{font-size:13px;color:var(--c-ink-2);margin:0 0 20px}
+nav.side ul{list-style:none;margin:0;padding:0}nav.side li a{display:block;padding:7px 10px;border-radius:6px;text-decoration:none;font-size:15px}
+nav.side li a:hover{background:#e9ebef}
+main{padding:40px clamp(16px,4vw,56px) 80px;max-width:1100px;min-width:0}
+code{overflow-wrap:anywhere}.card{min-width:0}
+section{padding:32px 0;border-top:1px solid var(--c-line)}section:first-of-type{border-top:0}
+h1{font-size:34px;line-height:1.1;margin:0 0 8px}h2{font-size:24px;margin:0 0 16px}h3{font-size:17px;margin:20px 0 8px}
+.muted{color:var(--c-ink-2)}.small{font-size:14px}
+.st{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.04em;padding:2px 8px;border-radius:999px;vertical-align:middle;border:1px solid}
+.st-open{color:var(--c-open);background:var(--c-open-bg);border-color:#e7b56a}.st-open::before{content:"○ "}
+.st-arbeitsfreigabe{color:var(--c-wip);background:var(--c-wip-bg);border-color:#aab5ef}.st-arbeitsfreigabe::before{content:"◐ "}
+.st-entschieden{color:var(--c-ok);background:var(--c-ok-bg);border-color:#9bd0ad}.st-entschieden::before{content:"● "}
+.statusbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding:14px 16px;border-radius:10px;background:var(--c-soft);margin:16px 0}
+.statusbar.draft{background:var(--c-open-bg)}.statusbar.fail{background:#fde8e8}
+.pds-demo-banner{background:#16181d;color:#fff;font-weight:700;letter-spacing:.06em;text-align:center;padding:10px 16px;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));gap:16px}
+.card{border:1px solid var(--c-line);border-radius:10px;padding:16px;background:#fff}
+.swatch{height:96px;border-radius:8px;border:1px solid rgba(0,0,0,.08);margin-bottom:12px}
+.codes{font:13px/1.6 ui-monospace,Menlo,monospace;display:grid;grid-template-columns:auto 1fr auto;gap:2px 8px;align-items:center}
+.copy{font:12px -apple-system,sans-serif;border:1px solid var(--c-line);background:#fff;border-radius:6px;padding:4px 8px;min-height:28px;cursor:pointer}
+table{border-collapse:collapse;width:100%;font-size:15px}td code{font-size:13px}th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--c-line);vertical-align:top}
+th{font-size:13px;color:var(--c-ink-2);font-weight:600}
+.logo-tile{display:flex;align-items:center;justify-content:center;height:140px;border-radius:8px;padding:16px;margin-bottom:10px}
+.logo-tile img{max-width:100%;max-height:100%}
+.pds-open{display:inline-block;color:var(--c-open);background:var(--c-open-bg);border:1px dashed #d69a45;border-radius:6px;padding:2px 8px;font-size:13px}
+.specimen{border-bottom:1px solid var(--c-line);padding:14px 0}.specimen .meta{font:12px ui-monospace,Menlo,monospace;color:var(--c-ink-2)}
+.space-bar{height:14px;background:var(--color-brand-primary,#888);border-radius:3px}
+.dodont{display:grid;grid-template-columns:1fr 1fr;gap:12px}.do,.dont{border-radius:8px;padding:12px 14px}
+.do{background:var(--c-ok-bg)}.do::before{content:"✓ Do · ";font-weight:700}.dont{background:#fde8e8}.dont::before{content:"✕ Don't · ";font-weight:700}
+.thumb{width:100%;border:1px solid var(--c-line);border-radius:8px;background:var(--c-soft)}
+.ui-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:8px 0 16px}
+footer{font-size:13px;color:var(--c-ink-2);border-top:1px solid var(--c-line);padding-top:16px;margin-top:24px}
+@media (max-width:860px){.layout{grid-template-columns:minmax(0,1fr)}table{display:block;overflow-x:auto}nav.side{position:static;height:auto;border-right:0;border-bottom:1px solid var(--c-line)}
+ nav.side ul{display:flex;flex-wrap:wrap;gap:4px}.dodont{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@page{size:A4;margin:16mm 14mm}
+@media print{nav.side,.copy,.skip{display:none!important}.layout{display:block}main{padding:0;max-width:none}
+ section{break-before:page;border-top:0;padding-top:0}section:first-of-type{break-before:auto}
+ .card,.specimen,tr,.dodont>div{break-inside:avoid}body{font-size:11pt}a{text-decoration:none}
+ .codes{grid-template-columns:auto 1fr}td code,th code{font-size:9pt}
+ body.is-demo section:first-of-type::before{display:none}
+ body.is-demo section::before{content:"DEMO · fiktive Beispielmarke · keine reale, freigegebene Marke";display:block;font-size:8pt;font-weight:700;letter-spacing:.04em;color:var(--c-ink-2);border-bottom:1px solid var(--c-line);padding-bottom:2mm;margin-bottom:5mm}}
+</style></head><body class="is-demo">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<div class="pds-demo-banner" role="note">DEMO · fiktive Beispielmarke · keine reale, freigegebene Marke</div>
+<div class="layout"><nav class="side" aria-label="Brand-Kit-Navigation">
+<p class="kit">Radhof (Demo)</p><p class="ver">Brand Kit v0.1.0 · ENTWURF</p><ul>
+<li><a href="#overview">Übersicht</a></li>
+<li><a href="#identity">Identität</a></li>
+<li><a href="#logos">Logos</a></li>
+<li><a href="#colors">Farben</a></li>
+<li><a href="#type">Typografie</a></li>
+<li><a href="#layout">Layout & Formen</a></li>
+<li><a href="#imagery">Bildsprache & Icons</a></li>
+<li><a href="#voice">Tonalität</a></li>
+<li><a href="#dodont">Do & Don't</a></li>
+<li><a href="#ui">UI-Elemente</a></li>
+<li><a href="#channels">Kanäle</a></li>
+<li><a href="#open">Offene Punkte</a></li>
+</ul></nav><main id="main">
+<section id="overview"><p class="muted small">Brand Kit · erzeugt aus <code>brand-kit.json</code> und den Token-Dateien</p><h1>Radhof (Demo)</h1><p class="muted">Fiktiver Fahrradservice in der Nachbarschaft: Reparatur am selben Tag, ehrlich erklärt.</p><div class="statusbar draft"><strong>Status: ENTWURF</strong><span>Version 0.1.0</span><span>Stand 2026-10-09</span><span>Core 1.1.0</span><span>5 offene Punkte, siehe <a href="#open">Offene Punkte</a></span></div><p class="small muted">Legende: <span class="st st-entschieden">Freigegeben (Demo)</span> <span class="st st-arbeitsfreigabe">Arbeitsfreigabe</span> <span class="st st-open">OFFEN</span> · Nur als „Freigegeben“ markierte Inhalte dürfen in Produktion verwendet werden.</p></section>
+<section id="identity"><h2>Identität <span class="st st-entschieden">Freigegeben (Demo)</span></h2>
+<p>Für Menschen, die täglich Rad fahren und keine Zeit für lange Werkstattwartezeiten haben.</p>
+<h3>Markenwerte</h3><div class="grid"><div class="card"><strong>Ehrlich</strong><p class="small muted">Wir sagen vorher, was es kostet.</p></div><div class="card"><strong>Schnell</strong><p class="small muted">Kleine Reparaturen am selben Tag.</p></div><div class="card"><strong>Nah</strong><p class="small muted">Werkstatt im Viertel, kurze Wege.</p></div></div>
+<h3>Persönlichkeit</h3><div class="dodont"><div class="do">direkt · freundlich · handwerklich · praktisch</div><div class="dont">sportlich-elitär · technisch abgehoben · laut</div></div>
+<p class="small muted">Quelle: Demo-Daten, keine Brand Foundation</p>
+</section>
+<section id="logos"><h2>Logos</h2><div class="grid">
+<div class="card"><div class="logo-tile" style="background:#f5f6f8"><img src="assets/radhof-demo-primary.svg" alt="Radhof Demo"></div><strong>Logo positiv</strong> <span class="st st-entschieden">Freigegeben (Demo)</span><p class="small muted">Variante: primary · Hintergrund: light<br>Mindestgröße: 120 px / 30 mm<br>Schutzraum: Höhe des Rad-Zeichens / 2<br>Datei: <code>radhof-demo-primary.svg</code></p></div>
+<div class="card"><div class="logo-tile" style="background:#16181d"><img src="assets/radhof-demo-negative.svg" alt="Radhof Demo"></div><strong>Logo negativ</strong> <span class="st st-entschieden">Freigegeben (Demo)</span><p class="small muted">Variante: negative · Hintergrund: dark<br>Mindestgröße: 120 px / 30 mm<br>Schutzraum: Höhe des Rad-Zeichens / 2<br>Datei: <code>radhof-demo-negative.svg</code></p></div>
+<div class="card"><div class="logo-tile" style="background:#f5f6f8"><img src="assets/radhof-demo-mark.svg" alt="Radhof Demo"></div><strong>Bildzeichen</strong> <span class="st st-entschieden">Freigegeben (Demo)</span><p class="small muted">Variante: mark · Hintergrund: light<br>Mindestgröße: 24 px / 8 mm<br>Schutzraum: 1/4 Durchmesser<br>Datei: <code>radhof-demo-mark.svg</code></p></div>
+<div class="card"><div class="logo-tile" style="background:#f5f6f8"><span class="pds-open">[OFFEN: Datei fehlt]</span></div><strong>Logo einfarbig (Stempel)</strong> <span class="st st-open">OFFEN</span><p class="small muted">Variante: mono · Hintergrund: any<br>Mindestgröße: 120 px / 25 mm<br>Schutzraum: —<br>Datei: <code>radhof-demo-mono.svg</code></p></div>
+</div></section>
+<section id="colors"><h2>Farben</h2><div class="grid">
+<div class="card"><div class="swatch" style="background:#C2410C"></div><strong>Kettenorange</strong> <span class="st st-entschieden">Freigegeben (Demo)</span><p class="small muted"><code>color.brand.primary</code><br>Rolle: brand<br>Markenfarbe, Hauptaktion, Social-Hintergründe</p><div class="codes"><span>HEX</span><span>#C2410C</span><button class="copy" type="button" data-copy="#C2410C" aria-label="HEX #C2410C kopieren">Kopieren</button><span>RGB</span><span>194, 65, 12</span><button class="copy" type="button" data-copy="194, 65, 12" aria-label="RGB 194, 65, 12 kopieren">Kopieren</button><span>OKLCH</span><span>oklch(0.553 0.174 38.4)</span><button class="copy" type="button" data-copy="oklch(0.553 0.174 38.4)" aria-label="OKLCH oklch(0.553 0.174 38.4) kopieren">Kopieren</button><span>CMYK</span><span>~ 0/75/100/15 (Näherung)</span><button class="copy" type="button" data-copy="~ 0/75/100/15 (Näherung)" aria-label="CMYK ~ 0/75/100/15 (Näherung) kopieren">Kopieren</button><span>RAL</span><span>~ RAL 2001 (Näherung, am Muster prüfen)</span><button class="copy" type="button" data-copy="~ RAL 2001 (Näherung, am Muster prüfen)" aria-label="RAL ~ RAL 2001 (Näherung, am Muster prüfen) kopieren">Kopieren</button></div><p class="small muted">Druckwerte sind Näherungen und am Muster zu prüfen.</p></div>
+<div class="card"><div class="swatch" style="background:#1E3A5F"></div><strong>Nachtblau</strong> <span class="st st-entschieden">Freigegeben (Demo)</span><p class="small muted"><code>color.brand.secondary</code><br>Rolle: brand<br>Sekundärflächen, sparsam</p><div class="codes"><span>HEX</span><span>#1E3A5F</span><button class="copy" type="button" data-copy="#1E3A5F" aria-label="HEX #1E3A5F kopieren">Kopieren</button><span>RGB</span><span>30, 58, 95</span><button class="copy" type="button" data-copy="30, 58, 95" aria-label="RGB 30, 58, 95 kopieren">Kopieren</button><span>OKLCH</span><span>oklch(0.346 0.074 256.0)</span><button class="copy" type="button" data-copy="oklch(0.346 0.074 256.0)" aria-label="OKLCH oklch(0.346 0.074 256.0) kopieren">Kopieren</button><span>CMYK</span><span>~ 100/70/30/35 (Näherung)</span><button class="copy" type="button" data-copy="~ 100/70/30/35 (Näherung)" aria-label="CMYK ~ 100/70/30/35 (Näherung) kopieren">Kopieren</button></div><p class="small muted">Druckwerte sind Näherungen und am Muster zu prüfen.</p></div>
+<div class="card"><div class="swatch" style="background:#151A1F"></div><strong>Asphalt</strong> <span class="st st-entschieden">Freigegeben (Demo)</span><p class="small muted"><code>color.text.primary</code><br>Rolle: ui<br>Text, dunkle Flächen</p><div class="codes"><span>HEX</span><span>#151A1F</span><button class="copy" type="button" data-copy="#151A1F" aria-label="HEX #151A1F kopieren">Kopieren</button><span>RGB</span><span>21, 26, 31</span><button class="copy" type="button" data-copy="21, 26, 31" aria-label="RGB 21, 26, 31 kopieren">Kopieren</button><span>OKLCH</span><span>oklch(0.215 0.012 248.4)</span><button class="copy" type="button" data-copy="oklch(0.215 0.012 248.4)" aria-label="OKLCH oklch(0.215 0.012 248.4) kopieren">Kopieren</button></div></div>
+<div class="card"><div class="swatch" style="background:#F4F6F8"></div><strong>Hellgrau</strong> <span class="st st-entschieden">Freigegeben (Demo)</span><p class="small muted"><code>color.bg.surface</code><br>Rolle: ui<br>Flächen, Karten</p><div class="codes"><span>HEX</span><span>#F4F6F8</span><button class="copy" type="button" data-copy="#F4F6F8" aria-label="HEX #F4F6F8 kopieren">Kopieren</button><span>RGB</span><span>244, 246, 248</span><button class="copy" type="button" data-copy="244, 246, 248" aria-label="RGB 244, 246, 248 kopieren">Kopieren</button><span>OKLCH</span><span>oklch(0.972 0.003 247.9)</span><button class="copy" type="button" data-copy="oklch(0.972 0.003 247.9)" aria-label="OKLCH oklch(0.972 0.003 247.9) kopieren">Kopieren</button></div></div>
+<div class="card"><div class="swatch" style="background:#1E8A45"></div><strong>Erfolg</strong> <span class="st st-entschieden">Freigegeben (Demo)</span><p class="small muted"><code>color.feedback.success.icon</code><br>Rolle: feedback<br>nur für Erfolg</p><div class="codes"><span>HEX</span><span>#1E8A45</span><button class="copy" type="button" data-copy="#1E8A45" aria-label="HEX #1E8A45 kopieren">Kopieren</button><span>RGB</span><span>30, 138, 69</span><button class="copy" type="button" data-copy="30, 138, 69" aria-label="RGB 30, 138, 69 kopieren">Kopieren</button><span>OKLCH</span><span>oklch(0.558 0.141 150.3)</span><button class="copy" type="button" data-copy="oklch(0.558 0.141 150.3)" aria-label="OKLCH oklch(0.558 0.141 150.3) kopieren">Kopieren</button></div></div>
+<div class="card"><div class="swatch" style="background:#C53030"></div><strong>Fehler</strong> <span class="st st-entschieden">Freigegeben (Demo)</span><p class="small muted"><code>color.feedback.error.icon</code><br>Rolle: feedback<br>nur für Fehler</p><div class="codes"><span>HEX</span><span>#C53030</span><button class="copy" type="button" data-copy="#C53030" aria-label="HEX #C53030 kopieren">Kopieren</button><span>RGB</span><span>197, 48, 48</span><button class="copy" type="button" data-copy="197, 48, 48" aria-label="RGB 197, 48, 48 kopieren">Kopieren</button><span>OKLCH</span><span>oklch(0.544 0.186 26.0)</span><button class="copy" type="button" data-copy="oklch(0.544 0.186 26.0)" aria-label="OKLCH oklch(0.544 0.186 26.0) kopieren">Kopieren</button></div></div>
+</div>
+<h3>Kontrastpaare (WCAG)</h3><table><thead><tr><th>Text / Element</th><th>Hintergrund</th><th>Verhältnis</th><th>Soll</th><th>Ergebnis</th></tr></thead><tbody>
+<tr><td><span style="color:#151A1F;background:#FFFFFF;padding:2px 8px;border-radius:4px">Aa</span> <code>color.text.primary</code></td><td><code>color.bg.canvas</code></td><td>17.51:1</td><td>4.5:1</td><td>✓ bestanden</td></tr>
+<tr><td><span style="color:#4B5560;background:#F4F6F8;padding:2px 8px;border-radius:4px">Aa</span> <code>color.text.secondary</code></td><td><code>color.bg.surface</code></td><td>7.00:1</td><td>4.5:1</td><td>✓ bestanden</td></tr>
+<tr><td><span style="color:#FFFFFF;background:#C2410C;padding:2px 8px;border-radius:4px">Aa</span> <code>color.action.primary.text</code></td><td><code>color.action.primary.bg</code></td><td>5.18:1</td><td>4.5:1</td><td>✓ bestanden</td></tr>
+<tr><td><span style="color:#FFFFFF;background:#9A3412;padding:2px 8px;border-radius:4px">Aa</span> <code>color.action.primary.text</code></td><td><code>color.action.primary.bg-hover</code></td><td>7.31:1</td><td>4.5:1</td><td>✓ bestanden</td></tr>
+<tr><td><span style="color:#FFFFFF;background:#C2410C;padding:2px 8px;border-radius:4px">Aa</span> <code>color.text.inverse</code></td><td><code>color.brand.primary</code></td><td>5.18:1</td><td>4.5:1</td><td>✓ bestanden</td></tr>
+<tr><td><span style="color:#FFFFFF;background:#151A1F;padding:2px 8px;border-radius:4px">Aa</span> <code>color.text.inverse</code></td><td><code>color.bg.inverse</code></td><td>17.51:1</td><td>4.5:1</td><td>✓ bestanden</td></tr>
+<tr><td><span style="color:#9A3412;background:#FFFFFF;padding:2px 8px;border-radius:4px">Aa</span> <code>color.text.link</code></td><td><code>color.bg.canvas</code></td><td>7.31:1</td><td>4.5:1</td><td>✓ bestanden</td></tr>
+<tr><td><span style="color:#B91C1C;background:#FDECEC;padding:2px 8px;border-radius:4px">Aa</span> <code>color.feedback.error.text</code></td><td><code>color.feedback.error.bg</code></td><td>5.66:1</td><td>4.5:1</td><td>✓ bestanden</td></tr>
+<tr><td><span style="color:#14612F;background:#E7F6EC;padding:2px 8px;border-radius:4px">Aa</span> <code>color.feedback.success.text</code></td><td><code>color.feedback.success.bg</code></td><td>6.76:1</td><td>4.5:1</td><td>✓ bestanden</td></tr>
+<tr><td><span style="color:#7A4B00;background:#FFF4D6;padding:2px 8px;border-radius:4px">Aa</span> <code>color.feedback.warning.text</code></td><td><code>color.feedback.warning.bg</code></td><td>6.76:1</td><td>4.5:1</td><td>✓ bestanden</td></tr>
+<tr><td><span style="color:#66727F;background:#FFFFFF;padding:2px 8px;border-radius:4px">Aa</span> <code>color.border.strong</code></td><td><code>color.bg.canvas</code></td><td>4.91:1</td><td>3:1</td><td>✓ bestanden</td></tr>
+<tr><td><span style="color:#1E40AF;background:#FFFFFF;padding:2px 8px;border-radius:4px">Aa</span> <code>color.focus.ring</code></td><td><code>color.bg.canvas</code></td><td>8.72:1</td><td>3:1</td><td>✓ bestanden</td></tr>
+</tbody></table>
+</section>
+<section id="type"><h2>Typografie <span class="st st-entschieden">Freigegeben (Demo)</span></h2><table><thead><tr><th>Rolle</th><th>Schrift</th><th>Fallback</th><th>Lizenz</th></tr></thead><tbody>
+<tr><td><code>font.family.display</code></td><td>Barlow Condensed <span class="st st-entschieden">Freigegeben (Demo)</span></td><td>Arial Narrow, sans-serif</td><td>SIL Open Font License 1.1 (Demo-Annahme) <span class="st st-entschieden">Freigegeben (Demo)</span></td></tr>
+<tr><td><code>font.family.body</code></td><td>Barlow <span class="st st-entschieden">Freigegeben (Demo)</span></td><td>Arial, sans-serif</td><td>SIL Open Font License 1.1 (Demo-Annahme) <span class="st st-entschieden">Freigegeben (Demo)</span></td></tr>
+</tbody></table><h3>Hierarchie</h3>
+<div class="specimen"><div class="meta">text.display.lg · 56px · 1.05 · 700</div><div class="pds-text-display-lg">Platten? Wir flicken das heute noch.</div></div>
+<div class="specimen"><div class="meta">text.heading.xl · 40px · 1.1 · 700</div><div class="pds-text-heading-xl">Platten? Wir flicken das heute noch.</div></div>
+<div class="specimen"><div class="meta">text.heading.lg · 32px · 1.15 · 700</div><div class="pds-text-heading-lg">Platten? Wir flicken das heute noch.</div></div>
+<div class="specimen"><div class="meta">text.heading.md · 26px · 1.25 · 600</div><div class="pds-text-heading-md">Platten? Wir flicken das heute noch.</div></div>
+<div class="specimen"><div class="meta">text.heading.sm · 22px · 1.3 · 600</div><div class="pds-text-heading-sm">Platten? Wir flicken das heute noch.</div></div>
+<div class="specimen"><div class="meta">text.body.lg · 21px · 1.55 · 400</div><div class="pds-text-body-lg">Platten? Wir flicken das heute noch.</div></div>
+<div class="specimen"><div class="meta">text.body.md · 18px · 1.6 · 400</div><div class="pds-text-body-md">Platten? Wir flicken das heute noch.</div></div>
+<div class="specimen"><div class="meta">text.body.sm · 16px · 1.55 · 400</div><div class="pds-text-body-sm">Platten? Wir flicken das heute noch.</div></div>
+<div class="specimen"><div class="meta">text.label.md · 16px · 1.3 · 600</div><div class="pds-text-label-md">Platten? Wir flicken das heute noch.</div></div>
+<div class="specimen"><div class="meta">text.caption · 14px · 1.45 · 400</div><div class="pds-text-caption">Platten? Wir flicken das heute noch.</div></div>
+</section>
+<section id="layout"><h2>Layout & Formen <span class="st st-entschieden">Freigegeben (Demo)</span></h2><p>4-px-Raster (Core-Default), 12-Spalten-Raster ab 1024 px, Ecken leicht gerundet.</p><h3>Abstände</h3>
+<div class="specimen"><div class="meta">space.inset.sm · 8px</div><div class="space-bar" style="width:8px"></div></div>
+<div class="specimen"><div class="meta">space.inset.md · 16px</div><div class="space-bar" style="width:16px"></div></div>
+<div class="specimen"><div class="meta">space.inset.lg · 24px</div><div class="space-bar" style="width:24px"></div></div>
+<div class="specimen"><div class="meta">space.inset.xl · 32px</div><div class="space-bar" style="width:32px"></div></div>
+<div class="specimen"><div class="meta">space.layout.section · 80px</div><div class="space-bar" style="width:80px"></div></div>
+<h3>Radien</h3><div class="ui-row">
+<div style="width:96px;height:64px;border:2px solid var(--color-border-strong,#888);border-radius:8px" title="radius.control"></div><span class="small"><code>radius.control</code> 8px</span>
+<div style="width:96px;height:64px;border:2px solid var(--color-border-strong,#888);border-radius:12px" title="radius.container"></div><span class="small"><code>radius.container</code> 12px</span>
+<div style="width:96px;height:64px;border:2px solid var(--color-border-strong,#888);border-radius:16px" title="radius.overlay"></div><span class="small"><code>radius.overlay</code> 16px</span>
+</div></section>
+<section id="imagery"><h2>Bildsprache & Icons</h2>
+<h3>Fotografie <span class="st st-entschieden">Freigegeben (Demo)</span></h3><p>Echte Werkstattmomente: Hände, Werkzeug, Räder im Tageslicht. Keine Stock-Sportler.</p>
+<div class="dodont"><div class="do">Tageslicht · echte Werkstatt · Details mit Werkzeug</div><div class="dont">Rennrad-Heroen · Filter · Stockfotos als Team</div></div>
+<h3>Icons <span class="st st-entschieden">Freigegeben (Demo)</span></h3><p>Linien-Icons, 2 px Strich, runde Enden, Größen aus size.icon.</p>
+<div class="dodont"><div class="do">ein Set · mit Text-Label</div><div class="dont">gemischte Stile · Icon ohne Bedeutung</div></div>
+<h3>Illustration <span class="st st-open">OFFEN</span></h3><p>Noch nicht entschieden.</p>
+</section>
+<section id="voice"><h2>Tonalität <span class="st st-entschieden">Freigegeben (Demo)</span></h2><p>Kurz, konkret, freundlich. Wie die Werkstatt im Viertel, die man duzt.</p>
+<p><strong>Anrede:</strong> du in allen Kanälen (Demo-Annahme)</p>
+<ul><li>Preis vor Leistung nennen</li><li>Fachbegriffe erklären</li><li>keine Superlative</li></ul>
+<div class="dodont"><div class="do">heute fertig, Festpreis, vorbeikommen</div><div class="dont">Premium-Service, unschlagbar, Bike-Experience</div></div>
+<h3>Social</h3><div class="dodont"><div class="do">Platten? Heute fertig. Ab 15 € inkl. Schlauch.</div><div class="dont">Erlebe den ultimativen Premium-Bike-Service!</div></div>
+<h3>Fehlermeldung</h3><div class="dodont"><div class="do">Für diesen Tag ist kein Termin mehr frei. Wähle bitte einen anderen Tag.</div><div class="dont">Fehler 409.</div></div>
+<p class="small muted">Quelle: Demo-Daten</p>
+</section>
+<section id="dodont"><h2>Do & Don't</h2>
+<h3>Logo auf Fotos <span class="st st-entschieden">Freigegeben (Demo)</span></h3><div class="dodont"><div class="do">Negativ-Logo auf ruhiger, dunkler Bildfläche</div><div class="dont">Positiv-Logo auf unruhigem Foto</div></div>
+<h3>Orange <span class="st st-entschieden">Freigegeben (Demo)</span></h3><div class="dodont"><div class="do">Orange für Marke und Hauptaktion</div><div class="dont">Orange für Fehler oder Warnungen</div></div>
+</section>
+<section id="ui"><h2>UI-Elemente <span class="st st-entschieden">Freigegeben (Demo)</span></h2><p class="muted small">Gerendert mit <code>brand.css</code>. Verhalten und Zustände: <code>core/components/</code>.</p>
+<div class="ui-row">
+ <button type="button" style="font:600 16px var(--font-family-body);background:var(--color-action-primary-bg);color:var(--color-action-primary-text);border:0;border-radius:var(--radius-control);padding:12px 20px;min-height:44px">Termin buchen</button>
+ <button type="button" style="font:600 16px var(--font-family-body);background:var(--color-action-secondary-bg);color:var(--color-action-secondary-text);border:1.5px solid var(--color-action-secondary-border);border-radius:var(--radius-control);padding:12px 20px;min-height:44px">Preise ansehen</button>
+ <a href="#ui" style="color:var(--color-text-link);font-family:var(--font-family-body)">Textlink</a></div>
+<div class="grid">
+ <div style="background:var(--color-bg-surface);border:1px solid var(--color-border-default);border-radius:var(--radius-container);padding:var(--space-inset-md);font-family:var(--font-family-body);color:var(--color-text-primary)">
+  <div class="pds-text-heading-sm">Karte</div><p style="color:var(--color-text-secondary)">Fläche, Rahmen und Radius aus den Tokens.</p></div>
+ <div style="font-family:var(--font-family-body)"><label for="demo-in" style="display:block;font-weight:600;margin-bottom:6px;color:var(--color-text-primary)">Eingabefeld</label>
+  <input id="demo-in" placeholder="Beispiel" style="width:100%;min-height:44px;padding:8px 12px;border:1.5px solid var(--color-border-strong);border-radius:var(--radius-control);font:16px var(--font-family-body)"></div>
+ <div role="note" style="background:var(--color-feedback-success-bg);color:var(--color-feedback-success-text);border:1px solid var(--color-feedback-success-border);border-radius:var(--radius-container);padding:12px 14px;font-family:var(--font-family-body)">✓ Erfolg: gespeichert.</div>
+ <div role="note" style="background:var(--color-feedback-error-bg);color:var(--color-feedback-error-text);border:1px solid var(--color-feedback-error-border);border-radius:var(--radius-container);padding:12px 14px;font-family:var(--font-family-body)">✕ Fehler: Bitte Datum ergänzen.</div>
+</div></section>
+<section id="channels"><h2>Kanäle</h2><table><thead><tr><th>Kanal</th><th>Status</th><th>Logo</th><th>CTA</th><th>Regeln</th><th>Ausgabe</th></tr></thead><tbody>
+<tr><td><strong>website</strong></td><td><span class="st st-entschieden">Freigegeben (Demo)</span></td><td>primary</td><td>Button primär</td><td class="small">eine Hauptaktion: Termin buchen</td><td class="small"><a href="channels/website.html">website.html</a></td></tr>
+<tr><td><strong>instagram_post</strong></td><td><span class="st st-entschieden">Freigegeben (Demo)</span></td><td>negative</td><td>helle Fläche auf Orange</td><td class="small">4:5, Text max. 3 Ebenen</td><td class="small"><a href="channels/instagram-post.html">instagram-post.html</a> · <a href="channels/instagram-post.png">instagram-post.png</a></td></tr>
+<tr><td><strong>instagram_story</strong></td><td><span class="st st-entschieden">Freigegeben (Demo)</span></td><td>negative</td><td>helle Fläche auf Orange</td><td class="small">9:16, Sicherheitsbereiche oben/unten frei</td><td class="small"><a href="channels/instagram-story.html">instagram-story.html</a> · <a href="channels/instagram-story.png">instagram-story.png</a></td></tr>
+<tr><td><strong>pinterest_pin</strong></td><td><span class="st st-arbeitsfreigabe">Arbeitsfreigabe</span></td><td>primary</td><td>Text</td><td class="small">2:3, Bild oben</td><td class="small"><a href="channels/pinterest-pin.html">pinterest-pin.html</a> · <a href="channels/pinterest-pin.png">pinterest-pin.png</a></td></tr>
+<tr><td><strong>linkedin_post</strong></td><td><span class="st st-entschieden">Freigegeben (Demo)</span></td><td>negative</td><td>helle Fläche</td><td class="small">1:1, sachlicher Ton</td><td class="small"><a href="channels/linkedin-post.html">linkedin-post.html</a> · <a href="channels/linkedin-post.png">linkedin-post.png</a></td></tr>
+<tr><td><strong>linkedin_carousel</strong></td><td><span class="st st-entschieden">Freigegeben (Demo)</span></td><td>negative</td><td>—</td><td class="small">PDF-Dokument, 3 Seiten</td><td class="small"><a href="channels/linkedin-carousel.html">linkedin-carousel.html</a> · <a href="channels/linkedin-carousel.pdf">linkedin-carousel.pdf</a></td></tr>
+<tr><td><strong>newsletter</strong></td><td><span class="st st-entschieden">Freigegeben (Demo)</span></td><td>primary</td><td>Button primär</td><td class="small">600 px, Inline-Werte</td><td class="small"><a href="channels/newsletter.html">newsletter.html</a></td></tr>
+<tr><td><strong>presentation</strong></td><td><span class="st st-entschieden">Freigegeben (Demo)</span></td><td>primary</td><td>—</td><td class="small">16:9</td><td class="small"><a href="channels/presentation.html">presentation.html</a> · <a href="channels/presentation.pdf">presentation.pdf</a></td></tr>
+<tr><td><strong>document</strong></td><td><span class="st st-entschieden">Freigegeben (Demo)</span></td><td>primary</td><td>—</td><td class="small">A4, 1 Seite</td><td class="small"><a href="channels/document-offer.html">document-offer.html</a> · <a href="channels/document-offer.pdf">document-offer.pdf</a></td></tr>
+</tbody></table><p class="small muted">Kanalregeln: <code>core/templates/cross-channel.md</code>. Plattformmaße und rechtliche Pflichten vor jeder Produktion aktuell prüfen.</p>
+<div class="grid"><img class="thumb" src="channels/instagram-post.png" alt="Vorschau instagram-post"><img class="thumb" src="channels/instagram-story.png" alt="Vorschau instagram-story"><img class="thumb" src="channels/pinterest-pin.png" alt="Vorschau pinterest-pin"><img class="thumb" src="channels/linkedin-post.png" alt="Vorschau linkedin-post"></div>
+</section>
+<section id="open"><h2>Offene Punkte</h2>
+<p>Diese Punkte sind nicht freigegeben und dürfen nicht als freigegeben verwendet werden.</p><table><thead><tr><th>Bereich</th><th>Status</th></tr></thead><tbody>
+<tr><td>imagery.illustration</td><td><span class="pds-open">OFFEN</span></td></tr>
+<tr><td>logos.mono</td><td><span class="pds-open">OFFEN</span></td></tr>
+<tr><td>channels.pinterest_pin</td><td><span class="pds-open">Arbeitsfreigabe</span></td></tr>
+<tr><td>Logo-Datei mono</td><td><span class="pds-open">fehlt</span></td></tr>
+<tr><td>channels.pinterest_pin: channels.pinterest_pin.sample.url</td><td><span class="pds-open">Inhalt fehlt</span></td></tr>
+</tbody></table>
+<footer>Brand Kit Radhof (Demo) · v0.1.0 · ENTWURF · Core 1.1.0 · erzeugt am 2026-10-09 mit PDS Brand-Kit-Generator 1.1.0</footer></section>
+</main></div><script>
+document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){var t=b.getAttribute('data-copy');
+function done(){var o=b.textContent;b.textContent='Kopiert';setTimeout(function(){b.textContent=o},1200)}
+if(navigator.clipboard){navigator.clipboard.writeText(t).then(done,function(){})}else{var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy');done()}catch(e){}a.remove()}})});
+</script></body></html>

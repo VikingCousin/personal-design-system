@@ -7,6 +7,7 @@
 - Jedes Logo hat definierte Varianten (z. B. horizontal, gestapelt, Bildzeichen), eine **positive und eine negative** Fassung und eine **einfarbige** Fassung.
 - **Schutzraum** und **Mindestgröße** werden je Variante festgelegt, digital (px) und im Druck (mm).
 - Das Logo funktioniert im **restriktivsten Medium** des Projekts (z. B. Favicon 16 px, Stempel, Stickerei, Fahrzeug aus Distanz).
+- Schriften im Logo werden **in Pfade umgewandelt**. Als Bild eingebundene SVGs laden keine Webfonts und zeigen sonst eine Ersatzschrift.
 - Logos werden als Vektor (SVG, PDF) abgelegt, Dateinamen nach [Projektvorlage](../process/project-template/assets/README.md).
 - Das Logo ist ein Bild mit Alt-Text (Markenname), als Link zur Startseite mit zugänglichem Namen.
 

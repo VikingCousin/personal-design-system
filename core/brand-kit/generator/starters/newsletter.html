@@ -1,0 +1,25 @@
+<!doctype html>
+<!-- PDS Starter · Newsletter/E-Mail · Regeln: core/templates/newsletter-email.md
+     E-Mail-Clients unterstützen CSS-Variablen nur eingeschränkt: Werte werden daher vom Generator als Inline-Werte aus den Tokens eingesetzt. -->
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{kit:channels.newsletter.sample.subject}}</title>
+<style>.pds-open{display:inline-block;background:{{token:color.feedback.warning.bg}};color:{{token:color.feedback.warning.text}};border:2px dashed {{token:color.feedback.warning.border}};border-radius:6px;padding:2px 8px}
+.pds-demo-banner{background:{{token:color.bg.inverse}};color:{{token:color.text.inverse}};font-weight:700;text-align:center;padding:10px;font-family:{{token:font.family.body}}}
+@media (max-width:620px){.inner{padding:24px 20px!important}}</style></head>
+<body style="margin:0;padding:0;background:{{token:color.bg.surface-sunken}}">
+{{demo_banner}}
+<div style="display:none;max-height:0;overflow:hidden">{{kit:channels.newsletter.sample.preheader}}</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:{{token:color.bg.surface-sunken}}"><tr><td align="center" style="padding:24px 12px">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:{{token:color.bg.canvas}};border-radius:{{token:radius.container}}">
+<tr><td class="inner" style="padding:28px 40px;border-bottom:1px solid {{token:color.border.subtle}}">{{logo:primary}}</td></tr>
+<tr><td class="inner" style="padding:36px 40px;font-family:{{token:font.family.body}};color:{{token:color.text.primary}};font-size:17px;line-height:1.6">
+<p style="margin:0 0 8px;color:{{token:color.text.secondary}};font-size:15px">{{kit:channels.newsletter.sample.eyebrow}}</p>
+<h1 style="margin:0 0 16px;font-family:{{token:font.family.display}};font-size:30px;line-height:1.2;color:{{token:color.text.primary}}">{{kit:channels.newsletter.sample.headline}}</h1>
+<p style="margin:0 0 24px">{{kit:channels.newsletter.sample.body}}</p>
+<table role="presentation" cellpadding="0" cellspacing="0"><tr><td style="background:{{token:color.action.primary.bg}};border-radius:{{token:radius.control}}">
+<a href="#" style="display:inline-block;padding:14px 24px;font-family:{{token:font.family.body}};font-weight:700;font-size:16px;color:{{token:color.action.primary.text}};text-decoration:none">{{kit:channels.newsletter.sample.cta}}</a></td></tr></table>
+</td></tr>
+<tr><td class="inner" style="padding:24px 40px;background:{{token:color.bg.surface}};font-family:{{token:font.family.body}};font-size:13px;line-height:1.6;color:{{token:color.text.secondary}}">
+{{kit:channels.newsletter.sample.legal.sender}}<br>{{kit:channels.newsletter.sample.legal.reason}}<br>
+<a href="#" style="color:{{token:color.text.link}}">{{kit:channels.newsletter.sample.legal.unsubscribe}}</a></td></tr>
+</table></td></tr></table></body></html>

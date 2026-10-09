@@ -1,0 +1,31 @@
+<!doctype html>
+<!-- PDS Starter · PDF-Dokument / Angebot (A4, 1 Seite) · pds:pages 1 · Regeln: core/templates/document.md
+     Rechtliche Pflichtangaben (z. B. für Rechnungen) vor Verwendung prüfen. -->
+<html lang="de"><head><meta charset="utf-8"><title>{{kit:meta.name}} · Angebot (Starter)</title>{{css}}
+<style>
+@page{size:A4;margin:18mm 18mm 16mm}*{box-sizing:border-box}html,body{margin:0}
+body{font-family:var(--font-family-body);color:var(--color-text-primary);font-size:10.5pt;line-height:1.5}
+.pds-demo-banner{background:var(--color-bg-inverse);color:var(--color-text-inverse);font:700 22px var(--font-family-body);letter-spacing:.06em;text-align:center;padding:12px}
+.pds-open{display:inline-block;background:var(--color-feedback-warning-bg);color:var(--color-feedback-warning-text);border:2px dashed var(--color-feedback-warning-border);border-radius:6px;padding:2px 10px;font-family:var(--font-family-body)}
+.pds-demo-banner{font-size:10pt;padding:6px;margin-bottom:8mm}
+.head{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1.5pt solid var(--color-brand-primary);padding-bottom:6mm;margin-bottom:10mm}
+.logo{height:14mm;width:auto}.sender{text-align:right;font-size:9pt;color:var(--color-text-secondary)}
+h1{font-family:var(--font-family-display);font-size:20pt;margin:0 0 2mm}.sub{color:var(--color-text-secondary);margin:0 0 8mm}
+table{width:100%;border-collapse:collapse;margin:6mm 0}th,td{padding:2.5mm 2mm;border-bottom:.5pt solid var(--color-border-default);text-align:left}
+th{font-size:9pt;color:var(--color-text-secondary)}td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+.total td{font-weight:700;border-bottom:1.5pt solid var(--color-text-primary)}
+.box{background:var(--color-bg-surface);border-radius:var(--radius-container);padding:4mm 5mm;margin-top:6mm}
+.foot{margin-top:12mm;font-size:8pt;color:var(--color-text-secondary);border-top:.5pt solid var(--color-border-subtle);padding-top:2mm}
+</style></head><body>
+{{demo_banner}}
+<div class="head">{{logo:primary}}<div class="sender">{{kit:channels.document.sample.sender}}</div></div>
+<p>{{kit:channels.document.sample.recipient}}</p>
+<h1>{{kit:channels.document.sample.title}}</h1><p class="sub">{{kit:channels.document.sample.date}}</p>
+<p>{{kit:channels.document.sample.intro}}</p>
+<table><thead><tr><th>Leistung</th><th class="n">Menge</th><th class="n">Preis</th></tr></thead><tbody>
+<tr><td>{{kit:channels.document.sample.items.0.name}}</td><td class="n">{{kit:channels.document.sample.items.0.qty}}</td><td class="n">{{kit:channels.document.sample.items.0.price}}</td></tr>
+<tr><td>{{kit:channels.document.sample.items.1.name}}</td><td class="n">{{kit:channels.document.sample.items.1.qty}}</td><td class="n">{{kit:channels.document.sample.items.1.price}}</td></tr>
+<tr class="total"><td>Summe</td><td></td><td class="n">{{kit:channels.document.sample.total}}</td></tr></tbody></table>
+<div class="box">{{kit:channels.document.sample.terms}}</div>
+<div class="foot">{{kit:channels.document.sample.legal}}</div>
+</body></html>

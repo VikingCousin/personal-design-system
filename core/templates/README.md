@@ -11,7 +11,10 @@
 | App / Dashboard | [app-dashboard.md](app-dashboard.md) | SaaS, Kundenportal, interne Tools, Buchungsverwaltung |
 | Dokument | [document.md](document.md) | Angebot, Bericht, Konzept, Rechnung, Brief |
 | Präsentation | [presentation.md](presentation.md) | Pitch, Workshop, Report |
-| Brand-Guideline | [brand-guideline.md](brand-guideline.md) | Kurzdokumentation einer Projektmarke |
+| Brand-Guideline | [brand-guideline.md](brand-guideline.md) | Inhaltsmodell des Brand Kits ([brand-kit](../brand-kit/README.md)) |
+| Cross-Channel | [cross-channel.md](cross-channel.md) | gemeinsame Kanalregeln, Token-Zuordnung, Pre-Production-Check |
+| Social Media | [social-media.md](social-media.md) | Instagram, Pinterest, LinkedIn |
+| Newsletter / E-Mail | [newsletter-email.md](newsletter-email.md) | Newsletter, Kampagne, Transaktions-E-Mail |
 
 ## Aufbau jeder Template-Spezifikation
 

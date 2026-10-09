@@ -1,0 +1,166 @@
+{
+  "meta": {
+    "project": "<projekt-name>",
+    "name": "<Markenname>",
+    "version": "0.1.0",
+    "status": "ENTWURF",
+    "demo": false,
+    "core_version": "1.1.0",
+    "language": "de",
+    "updated": "JJJJ-MM-TT",
+    "approved_by": "",
+    "approved_at": "",
+    "note": "Vorlage. Alle Inhalte OPEN, bis der Nutzer sie entscheidet. Nur der Nutzer setzt ENTSCHIEDEN bzw. FREIGEGEBEN (Gate G4)."
+  },
+  "tokens": {
+    "files": [
+      "../tokens/primitives.tokens.json",
+      "../tokens/semantic.tokens.json"
+    ],
+    "dark": null
+  },
+  "identity": {
+    "status": "OPEN",
+    "one_liner": "",
+    "positioning": "",
+    "values": [],
+    "personality": {
+      "is": [],
+      "is_not": []
+    },
+    "source": "brand/foundation.md"
+  },
+  "logos": [
+    {
+      "id": "primary",
+      "name": "Logo positiv",
+      "variant": "primary",
+      "background": "light",
+      "file": "../assets/logos/<datei>.svg",
+      "alt": "",
+      "min_size": {
+        "digital_px": null,
+        "print_mm": null
+      },
+      "clear_space": "",
+      "status": "OPEN",
+      "ai_share": false,
+      "rights_cleared": false
+    }
+  ],
+  "reference_assets": [],
+  "colors": [
+    {
+      "token": "color.brand.primary",
+      "name": "",
+      "role": "brand",
+      "usage": "",
+      "print": {},
+      "status": "OPEN"
+    }
+  ],
+  "contrast_pairs": [
+    {
+      "fg": "color.text.primary",
+      "bg": "color.bg.canvas",
+      "min": 4.5
+    },
+    {
+      "fg": "color.action.primary.text",
+      "bg": "color.action.primary.bg",
+      "min": 4.5
+    },
+    {
+      "fg": "color.text.secondary",
+      "bg": "color.bg.surface",
+      "min": 4.5
+    },
+    {
+      "fg": "color.focus.ring",
+      "bg": "color.bg.canvas",
+      "min": 3
+    }
+  ],
+  "typography": {
+    "status": "OPEN",
+    "sample_text": "",
+    "families": [
+      {
+        "token": "font.family.body",
+        "name": "",
+        "fallback": "",
+        "license": "",
+        "license_status": "OPEN",
+        "css_url": "",
+        "status": "OPEN"
+      }
+    ],
+    "styles": [
+      "text.heading.xl",
+      "text.heading.lg",
+      "text.heading.md",
+      "text.heading.sm",
+      "text.body.md",
+      "text.body.sm",
+      "text.label.md",
+      "text.caption"
+    ]
+  },
+  "layout": {
+    "status": "OPEN",
+    "notes": "",
+    "spacing_tokens": [
+      "space.inset.sm",
+      "space.inset.md",
+      "space.inset.lg",
+      "space.layout.section"
+    ],
+    "radius_tokens": [
+      "radius.control",
+      "radius.container"
+    ]
+  },
+  "imagery": {
+    "photography": {
+      "status": "OPEN",
+      "description": "",
+      "do": [],
+      "dont": []
+    },
+    "icons": {
+      "status": "OPEN",
+      "description": "",
+      "do": [],
+      "dont": []
+    },
+    "illustration": {
+      "status": "OPEN",
+      "description": ""
+    }
+  },
+  "voice": {
+    "status": "OPEN",
+    "summary": "",
+    "address_rule": "",
+    "principles": [],
+    "words_use": [],
+    "words_avoid": [],
+    "examples": [],
+    "source": "brand/voice.md"
+  },
+  "ui": {
+    "status": "OPEN",
+    "primary_label": "",
+    "secondary_label": ""
+  },
+  "do_dont": [],
+  "channels": {
+    "website": {
+      "status": "OPEN",
+      "logo": "primary",
+      "cta_style": "",
+      "notes": "",
+      "sample": {}
+    }
+  }
+}

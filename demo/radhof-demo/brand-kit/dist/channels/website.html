@@ -1,0 +1,43 @@
+<!doctype html>
+<!-- PDS Starter · Website/Landingpage · Regeln: core/templates/website-landingpage.md, cross-channel.md -->
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radhof (Demo) · Website (Starter)</title><link rel="stylesheet" href="../brand.css">
+<style>
+*{box-sizing:border-box}body{margin:0;background:var(--color-bg-canvas);color:var(--color-text-primary);font-family:var(--font-family-body);font-size:var(--font-size-body,18px);line-height:1.6}
+.pds-demo-banner{position:absolute;top:0;left:0;right:0;z-index:9;background:var(--color-bg-inverse);color:var(--color-text-inverse);font:700 22px var(--font-family-body);letter-spacing:.06em;text-align:center;padding:12px}
+.pds-open{display:inline-block;background:var(--color-feedback-warning-bg);color:var(--color-feedback-warning-text);border:2px dashed var(--color-feedback-warning-border);border-radius:6px;padding:2px 10px;font-family:var(--font-family-body)}
+.pds-demo-banner{position:static;font-size:14px}
+.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:16px;background:var(--color-bg-canvas);padding:8px 12px}
+a{color:var(--color-text-link)}:focus-visible{outline:var(--border-width-focus) solid var(--color-focus-ring);outline-offset:var(--border-offset-focus)}
+.wrap{max-width:var(--size-container-lg);margin:0 auto;padding:0 var(--space-layout-gutter)}
+header{border-bottom:var(--border-width-default) solid var(--color-border-subtle)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px;flex-wrap:wrap}
+.logo{height:40px;width:auto}
+.btn{display:inline-flex;align-items:center;min-height:var(--size-target-min);padding:0 var(--space-inset-lg);border-radius:var(--radius-control);background:var(--color-action-primary-bg);color:var(--color-action-primary-text);font-weight:600;text-decoration:none}
+.btn:hover{background:var(--color-action-primary-bg-hover)}
+.hero{padding:var(--space-layout-section) 0}
+.eyebrow{margin:0 0 var(--space-stack-sm);color:var(--color-text-secondary)}
+.hero h1{margin:0 0 var(--space-stack-md);max-width:18ch}
+.hero p.lede{max-width:60ch;margin:0 0 var(--space-stack-lg)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:var(--space-inline-lg);padding-bottom:var(--space-layout-section)}
+.card{background:var(--color-bg-surface);border:var(--border-width-default) solid var(--color-border-default);border-radius:var(--radius-container);padding:var(--space-inset-lg)}
+.card h2{margin:0 0 var(--space-stack-xs)}
+footer{background:var(--color-bg-surface-sunken);padding:var(--space-inset-xl) 0;color:var(--color-text-secondary)}
+</style></head><body>
+<div class="pds-demo-banner">DEMO · fiktive Beispielmarke · keine reale, freigegebene Marke</div>
+<a href="#main" class="skip">Zum Inhalt springen</a>
+<header><div class="wrap"><img class="logo" src="../assets/radhof-demo-primary.svg" alt="Radhof Demo"><a class="btn" href="#cta">Termin buchen</a></div></header>
+<main id="main">
+<section class="hero"><div class="wrap">
+<p class="eyebrow pds-text-label-md">Fahrradservice im Viertel (Demo)</p>
+<h1 class="pds-text-display-lg">Dein Rad. Heute repariert.</h1>
+<p class="lede pds-text-body-lg">Kleine Reparaturen am selben Tag, Festpreis vorher. Einfach vorbeikommen oder Termin buchen.</p>
+<a id="cta" class="btn" href="#">Termin buchen</a>
+</div></section>
+<section class="wrap cards" aria-label="Leistungen">
+<div class="card"><h2 class="pds-text-heading-sm">Festpreis vorher</h2><p>Du weißt vor der Reparatur, was es kostet.</p></div>
+<div class="card"><h2 class="pds-text-heading-sm">Heute fertig</h2><p>Platten, Bremsen, Schaltung meist am selben Tag.</p></div>
+<div class="card"><h2 class="pds-text-heading-sm">Im Viertel</h2><p>Kurze Wege, freundliche Leute.</p></div>
+</section></main>
+<footer><div class="wrap pds-text-body-sm">Radhof (Demo) · fiktive Beispielmarke · Musterstraße 1 · 00000 Musterstadt · Impressum · Datenschutz</div></footer>
+</body></html>

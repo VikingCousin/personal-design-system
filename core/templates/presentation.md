@@ -1,5 +1,7 @@
 # Template: Präsentation (Core)
 
+> Token-Zuordnung, Logo- und CTA-Regeln, Pre-Production-Check und Export: [cross-channel.md](cross-channel.md) · Starter: `core/brand-kit/generator/starters/presentation.html`
+
 ## Zweck
 Folien, die einen Vortrag unterstützen oder allein gelesen werden (Pitch, Workshop, Report). Format 16:9, Ausgabe als PPTX, PDF oder Online-Slides.
 

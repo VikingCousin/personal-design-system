@@ -1,0 +1,531 @@
+{
+  "meta": {
+    "project": "radhof-demo",
+    "name": "Radhof (Demo)",
+    "version": "0.1.0",
+    "status": "ENTWURF",
+    "demo": true,
+    "core_version": "1.1.0",
+    "language": "de",
+    "updated": "2026-10-09",
+    "approved_by": "",
+    "approved_at": "",
+    "note": "DEMO · fiktive Beispielmarke zur Validierung von Core 1.1. Keine reale Marke, keine reale Freigabe."
+  },
+  "tokens": {
+    "files": [
+      "../tokens/primitives.tokens.json",
+      "../tokens/semantic.tokens.json"
+    ],
+    "dark": null
+  },
+  "identity": {
+    "status": "ENTSCHIEDEN",
+    "one_liner": "Fiktiver Fahrradservice in der Nachbarschaft: Reparatur am selben Tag, ehrlich erklärt.",
+    "positioning": "Für Menschen, die täglich Rad fahren und keine Zeit für lange Werkstattwartezeiten haben.",
+    "values": [
+      {
+        "name": "Ehrlich",
+        "description": "Wir sagen vorher, was es kostet."
+      },
+      {
+        "name": "Schnell",
+        "description": "Kleine Reparaturen am selben Tag."
+      },
+      {
+        "name": "Nah",
+        "description": "Werkstatt im Viertel, kurze Wege."
+      }
+    ],
+    "personality": {
+      "is": [
+        "direkt",
+        "freundlich",
+        "handwerklich",
+        "praktisch"
+      ],
+      "is_not": [
+        "sportlich-elitär",
+        "technisch abgehoben",
+        "laut"
+      ]
+    },
+    "source": "Demo-Daten, keine Brand Foundation"
+  },
+  "logos": [
+    {
+      "id": "primary",
+      "name": "Logo positiv",
+      "variant": "primary",
+      "background": "light",
+      "file": "../assets/logos/radhof-demo-primary.svg",
+      "alt": "Radhof Demo",
+      "min_size": {
+        "digital_px": 120,
+        "print_mm": 30
+      },
+      "clear_space": "Höhe des Rad-Zeichens / 2",
+      "status": "ENTSCHIEDEN",
+      "ai_share": true,
+      "rights_cleared": true
+    },
+    {
+      "id": "negative",
+      "name": "Logo negativ",
+      "variant": "negative",
+      "background": "dark",
+      "file": "../assets/logos/radhof-demo-negative.svg",
+      "alt": "Radhof Demo",
+      "min_size": {
+        "digital_px": 120,
+        "print_mm": 30
+      },
+      "clear_space": "Höhe des Rad-Zeichens / 2",
+      "status": "ENTSCHIEDEN",
+      "ai_share": true,
+      "rights_cleared": true
+    },
+    {
+      "id": "mark",
+      "name": "Bildzeichen",
+      "variant": "mark",
+      "background": "light",
+      "file": "../assets/logos/radhof-demo-mark.svg",
+      "alt": "Radhof Demo",
+      "min_size": {
+        "digital_px": 24,
+        "print_mm": 8
+      },
+      "clear_space": "1/4 Durchmesser",
+      "status": "ENTSCHIEDEN",
+      "ai_share": false,
+      "rights_cleared": true
+    },
+    {
+      "id": "mono",
+      "name": "Logo einfarbig (Stempel)",
+      "variant": "mono",
+      "background": "any",
+      "file": "../assets/logos/radhof-demo-mono.svg",
+      "alt": "Radhof Demo",
+      "min_size": {
+        "digital_px": 120,
+        "print_mm": 25
+      },
+      "clear_space": "—",
+      "status": "OPEN"
+    }
+  ],
+  "colors": [
+    {
+      "token": "color.brand.primary",
+      "name": "Kettenorange",
+      "role": "brand",
+      "usage": "Markenfarbe, Hauptaktion, Social-Hintergründe",
+      "print": {
+        "cmyk": "~ 0/75/100/15 (Näherung)",
+        "ral": "~ RAL 2001 (Näherung, am Muster prüfen)"
+      },
+      "status": "ENTSCHIEDEN"
+    },
+    {
+      "token": "color.brand.secondary",
+      "name": "Nachtblau",
+      "role": "brand",
+      "usage": "Sekundärflächen, sparsam",
+      "print": {
+        "cmyk": "~ 100/70/30/35 (Näherung)"
+      },
+      "status": "ENTSCHIEDEN"
+    },
+    {
+      "token": "color.text.primary",
+      "name": "Asphalt",
+      "role": "ui",
+      "usage": "Text, dunkle Flächen",
+      "status": "ENTSCHIEDEN"
+    },
+    {
+      "token": "color.bg.surface",
+      "name": "Hellgrau",
+      "role": "ui",
+      "usage": "Flächen, Karten",
+      "status": "ENTSCHIEDEN"
+    },
+    {
+      "token": "color.feedback.success.icon",
+      "name": "Erfolg",
+      "role": "feedback",
+      "usage": "nur für Erfolg",
+      "status": "ENTSCHIEDEN"
+    },
+    {
+      "token": "color.feedback.error.icon",
+      "name": "Fehler",
+      "role": "feedback",
+      "usage": "nur für Fehler",
+      "status": "ENTSCHIEDEN"
+    }
+  ],
+  "contrast_pairs": [
+    {
+      "fg": "color.text.primary",
+      "bg": "color.bg.canvas",
+      "min": 4.5
+    },
+    {
+      "fg": "color.text.secondary",
+      "bg": "color.bg.surface",
+      "min": 4.5
+    },
+    {
+      "fg": "color.action.primary.text",
+      "bg": "color.action.primary.bg",
+      "min": 4.5
+    },
+    {
+      "fg": "color.action.primary.text",
+      "bg": "color.action.primary.bg-hover",
+      "min": 4.5
+    },
+    {
+      "fg": "color.text.inverse",
+      "bg": "color.brand.primary",
+      "min": 4.5
+    },
+    {
+      "fg": "color.text.inverse",
+      "bg": "color.bg.inverse",
+      "min": 4.5
+    },
+    {
+      "fg": "color.text.link",
+      "bg": "color.bg.canvas",
+      "min": 4.5
+    },
+    {
+      "fg": "color.feedback.error.text",
+      "bg": "color.feedback.error.bg",
+      "min": 4.5
+    },
+    {
+      "fg": "color.feedback.success.text",
+      "bg": "color.feedback.success.bg",
+      "min": 4.5
+    },
+    {
+      "fg": "color.feedback.warning.text",
+      "bg": "color.feedback.warning.bg",
+      "min": 4.5
+    },
+    {
+      "fg": "color.border.strong",
+      "bg": "color.bg.canvas",
+      "min": 3
+    },
+    {
+      "fg": "color.focus.ring",
+      "bg": "color.bg.canvas",
+      "min": 3
+    }
+  ],
+  "typography": {
+    "status": "ENTSCHIEDEN",
+    "sample_text": "Platten? Wir flicken das heute noch.",
+    "families": [
+      {
+        "token": "font.family.display",
+        "name": "Barlow Condensed",
+        "fallback": "Arial Narrow, sans-serif",
+        "license": "SIL Open Font License 1.1 (Demo-Annahme)",
+        "license_status": "ENTSCHIEDEN",
+        "css_url": "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;600;700&display=swap",
+        "status": "ENTSCHIEDEN"
+      },
+      {
+        "token": "font.family.body",
+        "name": "Barlow",
+        "fallback": "Arial, sans-serif",
+        "license": "SIL Open Font License 1.1 (Demo-Annahme)",
+        "license_status": "ENTSCHIEDEN",
+        "status": "ENTSCHIEDEN"
+      }
+    ],
+    "styles": [
+      "text.display.lg",
+      "text.heading.xl",
+      "text.heading.lg",
+      "text.heading.md",
+      "text.heading.sm",
+      "text.body.lg",
+      "text.body.md",
+      "text.body.sm",
+      "text.label.md",
+      "text.caption"
+    ]
+  },
+  "layout": {
+    "status": "ENTSCHIEDEN",
+    "notes": "4-px-Raster (Core-Default), 12-Spalten-Raster ab 1024 px, Ecken leicht gerundet.",
+    "spacing_tokens": [
+      "space.inset.sm",
+      "space.inset.md",
+      "space.inset.lg",
+      "space.inset.xl",
+      "space.layout.section"
+    ],
+    "radius_tokens": [
+      "radius.control",
+      "radius.container",
+      "radius.overlay"
+    ]
+  },
+  "imagery": {
+    "photography": {
+      "status": "ENTSCHIEDEN",
+      "description": "Echte Werkstattmomente: Hände, Werkzeug, Räder im Tageslicht. Keine Stock-Sportler.",
+      "do": [
+        "Tageslicht",
+        "echte Werkstatt",
+        "Details mit Werkzeug"
+      ],
+      "dont": [
+        "Rennrad-Heroen",
+        "Filter",
+        "Stockfotos als Team"
+      ]
+    },
+    "icons": {
+      "status": "ENTSCHIEDEN",
+      "description": "Linien-Icons, 2 px Strich, runde Enden, Größen aus size.icon.",
+      "do": [
+        "ein Set",
+        "mit Text-Label"
+      ],
+      "dont": [
+        "gemischte Stile",
+        "Icon ohne Bedeutung"
+      ]
+    },
+    "illustration": {
+      "status": "OPEN",
+      "description": "Noch nicht entschieden."
+    }
+  },
+  "voice": {
+    "status": "ENTSCHIEDEN",
+    "summary": "Kurz, konkret, freundlich. Wie die Werkstatt im Viertel, die man duzt.",
+    "address_rule": "du in allen Kanälen (Demo-Annahme)",
+    "principles": [
+      "Preis vor Leistung nennen",
+      "Fachbegriffe erklären",
+      "keine Superlative"
+    ],
+    "words_use": [
+      "heute fertig",
+      "Festpreis",
+      "vorbeikommen"
+    ],
+    "words_avoid": [
+      "Premium-Service",
+      "unschlagbar",
+      "Bike-Experience"
+    ],
+    "examples": [
+      {
+        "context": "Social",
+        "do": "Platten? Heute fertig. Ab 15 € inkl. Schlauch.",
+        "dont": "Erlebe den ultimativen Premium-Bike-Service!"
+      },
+      {
+        "context": "Fehlermeldung",
+        "do": "Für diesen Tag ist kein Termin mehr frei. Wähle bitte einen anderen Tag.",
+        "dont": "Fehler 409."
+      }
+    ],
+    "source": "Demo-Daten"
+  },
+  "ui": {
+    "status": "ENTSCHIEDEN",
+    "primary_label": "Termin buchen",
+    "secondary_label": "Preise ansehen"
+  },
+  "do_dont": [
+    {
+      "topic": "Logo auf Fotos",
+      "do": "Negativ-Logo auf ruhiger, dunkler Bildfläche",
+      "dont": "Positiv-Logo auf unruhigem Foto",
+      "status": "ENTSCHIEDEN"
+    },
+    {
+      "topic": "Orange",
+      "do": "Orange für Marke und Hauptaktion",
+      "dont": "Orange für Fehler oder Warnungen",
+      "status": "ENTSCHIEDEN"
+    }
+  ],
+  "channels": {
+    "website": {
+      "status": "ENTSCHIEDEN",
+      "logo": "primary",
+      "cta_style": "Button primär",
+      "notes": "eine Hauptaktion: Termin buchen",
+      "sample": {
+        "eyebrow": "Fahrradservice im Viertel (Demo)",
+        "headline": "Dein Rad. Heute repariert.",
+        "body": "Kleine Reparaturen am selben Tag, Festpreis vorher. Einfach vorbeikommen oder Termin buchen.",
+        "cta": "Termin buchen",
+        "benefits": [
+          {
+            "title": "Festpreis vorher",
+            "text": "Du weißt vor der Reparatur, was es kostet."
+          },
+          {
+            "title": "Heute fertig",
+            "text": "Platten, Bremsen, Schaltung meist am selben Tag."
+          },
+          {
+            "title": "Im Viertel",
+            "text": "Kurze Wege, freundliche Leute."
+          }
+        ],
+        "legal": "Radhof (Demo) · fiktive Beispielmarke · Musterstraße 1 · 00000 Musterstadt · Impressum · Datenschutz"
+      }
+    },
+    "instagram_post": {
+      "status": "ENTSCHIEDEN",
+      "logo": "negative",
+      "cta_style": "helle Fläche auf Orange",
+      "notes": "4:5, Text max. 3 Ebenen",
+      "sample": {
+        "eyebrow": "Werkstatt-Tipp",
+        "headline": "Platten? Heute fertig.",
+        "body": "Ab 15 € inkl. Schlauch. Ohne Termin.",
+        "cta": "Vorbeikommen",
+        "url": "radhof-demo.example"
+      }
+    },
+    "instagram_story": {
+      "status": "ENTSCHIEDEN",
+      "logo": "negative",
+      "cta_style": "helle Fläche auf Orange",
+      "notes": "9:16, Sicherheitsbereiche oben/unten frei",
+      "sample": {
+        "eyebrow": "Diese Woche",
+        "headline": "Bremsen-Check gratis",
+        "body": "Beim Service-Termin.",
+        "cta": "Link in Bio",
+        "url": "radhof-demo.example",
+        "label": "Anzeige"
+      }
+    },
+    "pinterest_pin": {
+      "status": "ARBEITSFREIGABE",
+      "logo": "primary",
+      "cta_style": "Text",
+      "notes": "2:3, Bild oben",
+      "sample": {
+        "eyebrow": "Anleitung",
+        "headline": "Kette richtig ölen in 3 Schritten",
+        "body": "Sauber, dünn, abwischen. Mehr braucht es nicht.",
+        "image_note": "Bild: Hand ölt Fahrradkette (Platzhalter, Demo)"
+      }
+    },
+    "linkedin_post": {
+      "status": "ENTSCHIEDEN",
+      "logo": "negative",
+      "cta_style": "helle Fläche",
+      "notes": "1:1, sachlicher Ton",
+      "sample": {
+        "eyebrow": "Für Firmen im Viertel",
+        "headline": "Dienstrad-Service vor Ort",
+        "body": "Wir warten eure Diensträder direkt bei euch.",
+        "cta": "Angebot anfragen",
+        "url": "radhof-demo.example"
+      }
+    },
+    "linkedin_carousel": {
+      "status": "ENTSCHIEDEN",
+      "logo": "negative",
+      "cta_style": "—",
+      "notes": "PDF-Dokument, 3 Seiten",
+      "sample": {
+        "slides": [
+          {
+            "title": "3 Zeichen, dass dein Dienstrad Service braucht"
+          },
+          {
+            "title": "1. Bremsen quietschen",
+            "text": "Meist reichen neue Beläge. Dauer: 20 Minuten."
+          },
+          {
+            "title": "Wir kommen vorbei",
+            "text": "Service vor Ort für Firmen im Viertel."
+          }
+        ]
+      }
+    },
+    "newsletter": {
+      "status": "ENTSCHIEDEN",
+      "logo": "primary",
+      "cta_style": "Button primär",
+      "notes": "600 px, Inline-Werte",
+      "sample": {
+        "subject": "Frühjahrs-Check: Dein Rad ist bereit? (Demo)",
+        "preheader": "Bremsen, Licht, Luft: in 30 Minuten fit.",
+        "eyebrow": "Newsletter April (Demo)",
+        "headline": "Frühjahrs-Check in 30 Minuten",
+        "body": "Wir prüfen Bremsen, Licht und Reifen und sagen dir vorher, was es kostet.",
+        "cta": "Termin buchen",
+        "legal": {
+          "sender": "Radhof (Demo) · fiktive Beispielmarke · Musterstraße 1 · 00000 Musterstadt",
+          "reason": "Du erhältst diese E-Mail, weil du den Demo-Newsletter abonniert hast.",
+          "unsubscribe": "Newsletter abbestellen"
+        }
+      }
+    },
+    "presentation": {
+      "status": "ENTSCHIEDEN",
+      "logo": "primary",
+      "cta_style": "—",
+      "notes": "16:9",
+      "sample": {
+        "date": "Oktober 2026 · Demo",
+        "title": "Dienstrad-Service für Firmen",
+        "subtitle": "Ein fiktives Angebot von Radhof (Demo)",
+        "message": "Weniger Ausfall, weil wir zu euch kommen",
+        "message_text": "Wartung direkt im Betrieb, Termine nach Plan, Festpreise pro Rad.",
+        "closing": "Nächster Schritt: Kennenlern-Termin",
+        "contact": "hallo@radhof-demo.example"
+      }
+    },
+    "document": {
+      "status": "ENTSCHIEDEN",
+      "logo": "primary",
+      "cta_style": "—",
+      "notes": "A4, 1 Seite",
+      "sample": {
+        "sender": "Radhof (Demo) · Musterstraße 1 · 00000 Musterstadt",
+        "recipient": "Beispiel GmbH · z. Hd. Max Muster (fiktiv)",
+        "title": "Angebot Dienstrad-Service",
+        "date": "Angebot Nr. DEMO-001 · 9. Oktober 2026",
+        "intro": "Vielen Dank für deine Anfrage. Gern warten wir eure Diensträder vor Ort.",
+        "items": [
+          {
+            "name": "Inspektion vor Ort",
+            "qty": "10",
+            "price": "490,00 €"
+          },
+          {
+            "name": "Anfahrt",
+            "qty": "1",
+            "price": "35,00 €"
+          }
+        ],
+        "total": "525,00 € (Demo)",
+        "terms": "Gültig 30 Tage. Fiktives Demo-Angebot, keine rechtsverbindlichen Angaben.",
+        "legal": "Radhof (Demo) · fiktive Beispielmarke · keine realen Firmendaten"
+      }
+    }
+  }
+}

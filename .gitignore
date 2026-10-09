@@ -41,3 +41,6 @@ node_modules/
 # Private Projekte (nicht öffentlich)
 # Das Pilotprojekt enthält eine vertrauliche Geschäftsidee und bleibt nur lokal.
 projects/digital-legacy/
+
+# Erzeugte Exportpakete für externe KI-Tools (lokal erzeugen, nicht versionieren)
+**/brand-kit/ai-pack/

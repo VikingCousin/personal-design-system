@@ -1,5 +1,7 @@
 # Template: Website / Landingpage (Core)
 
+> Token-Zuordnung, Logo- und CTA-Regeln, Pre-Production-Check und Export: [cross-channel.md](cross-channel.md) · Starter: `core/brand-kit/generator/starters/website.html`
+
 ## Zweck
 Einstiegsseite, die in wenigen Sekunden klärt: **Was ist das? Für wen? Warum hier? Was tue ich als Nächstes?**
 

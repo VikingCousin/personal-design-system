@@ -40,5 +40,8 @@ Kurze Abläufe (≤ 5 Felder) dürfen einseitig sein. Dann sind Zusammenfassung 
 ## Komponenten und Tokens
 Form Field und alle Eingaben · Button · Radio Card · Alert · Toast · Loading State · Error State · Table bzw. Liste (Zusammenfassung) · optional Projektkomponenten (Datums- bzw. Zeitraumwahl, Warenkorb)
 
+## Bestätigungs-E-Mail
+Gestaltung und Compliance nach [newsletter-email.md](newsletter-email.md) (Art „Transaktion“).
+
 ## Was das Projekt festlegt
 Schritte und Reihenfolge, Pflichtangaben, Zahlungs- bzw. Anfragemodell, Texte der Abschluss-Aktion, Bestätigungsinhalte.

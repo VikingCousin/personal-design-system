@@ -1,0 +1,21 @@
+<!doctype html>
+<!-- PDS Starter · Präsentation 16:9 (3 Folien) · pds:pages 3 · Regeln: core/templates/presentation.md -->
+<html lang="de"><head><meta charset="utf-8"><title>{{kit:meta.name}} · Präsentation (Starter)</title>{{css}}
+<style>
+@page{size:1920px 1080px;margin:0}*{box-sizing:border-box}html,body{margin:0}
+body{font-family:var(--font-family-body);color:var(--color-text-primary)}
+.pds-demo-banner{background:var(--color-bg-inverse);color:var(--color-text-inverse);font:700 22px var(--font-family-body);letter-spacing:.06em;text-align:center;padding:12px}
+.pds-open{display:inline-block;background:var(--color-feedback-warning-bg);color:var(--color-feedback-warning-text);border:2px dashed var(--color-feedback-warning-border);border-radius:6px;padding:2px 10px;font-family:var(--font-family-body)}
+.pds-demo-banner{position:absolute;top:0;left:0;right:0}
+.slide{position:relative;width:1920px;height:1080px;padding:120px 140px;display:flex;flex-direction:column;justify-content:space-between;break-after:page;overflow:hidden;background:var(--color-bg-canvas)}
+.slide:last-child{break-after:auto}.title{background:var(--color-brand-primary);color:var(--color-text-inverse)}
+h1{font-family:var(--font-family-display);font-size:120px;line-height:1.02;margin:0;max-width:14ch}
+h2{font-family:var(--font-family-display);font-size:80px;line-height:1.1;margin:0 0 32px;max-width:20ch}
+p{font-size:40px;line-height:1.4;margin:0;max-width:40ch}
+.meta{font-size:30px;opacity:.85}.logo{height:72px;width:auto}
+.foot{display:flex;justify-content:space-between;align-items:center;font-size:24px;color:var(--color-text-secondary)}
+</style></head><body>
+<div class="slide title">{{demo_banner}}<span class="meta">{{kit:channels.presentation.sample.date}}</span><div><h1>{{kit:channels.presentation.sample.title}}</h1><p style="margin-top:28px">{{kit:channels.presentation.sample.subtitle}}</p></div>{{logo:negative}}</div>
+<div class="slide"><div><h2>{{kit:channels.presentation.sample.message}}</h2><p>{{kit:channels.presentation.sample.message_text}}</p></div><div class="foot">{{logo:primary}}<span>2</span></div></div>
+<div class="slide"><div><h2>{{kit:channels.presentation.sample.closing}}</h2><p>{{kit:channels.presentation.sample.contact}}</p></div><div class="foot">{{logo:primary}}<span>3</span></div></div>
+</body></html>

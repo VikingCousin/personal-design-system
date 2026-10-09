@@ -1,5 +1,7 @@
 # Template: Einfache Brand-Guideline (Core)
 
+> Ab Core 1.1 ist dies das **Inhaltsmodell**; die erzeugte Form ist das **Brand Kit** (`BRAND-KIT.html` und `BRAND-KIT.pdf`) aus [`core/brand-kit/`](../brand-kit/README.md). Die Kapitel unten entsprechen den Abschnitten von `brand-kit.json`. Eine von Hand geschriebene Guideline ist nur nötig, wenn kein Brand Kit erzeugt wird.
+
 ## Zweck
 Kurze, verständliche Dokumentation einer Projektmarke, damit Menschen und AI Agents sie konsistent anwenden können. Ziel: **ca. 10–20 Seiten bzw. ein Online-Dokument**, kein Handbuch.
 

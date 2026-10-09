@@ -26,7 +26,7 @@
 | 2 Brand Foundation | — | G2 |
 | 3 Research (bei Bedarf) | — | — |
 | 4 Creative Direction / Brand-Import | — | G3 |
-| 5 Tokens | — | G4 |
+| 5 Tokens & Brand Kit | — | G4 |
 | 6 Components | — | G5 |
 | 7 Templates | — | G5 |
 | 8 Anwendung / Release | — | G6 |

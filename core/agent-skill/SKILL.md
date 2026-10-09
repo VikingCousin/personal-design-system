@@ -5,7 +5,7 @@ description: Arbeitsweise für das Personal Design System (PDS) des Nutzers. Ver
 
 # Personal Design System · Agent Skill
 
-> Core-Version: **1.0.0**. Dieses Skill beschreibt, **wie** Claude mit dem System arbeitet. **Was** gilt, steht in `core/`.
+> Core-Version: **1.1.0**. Dieses Skill beschreibt, **wie** Claude mit dem System arbeitet. **Was** gilt, steht in `core/`.
 > Pfad des Systems: das Wurzelverzeichnis dieses Repositorys (im Folgenden `PDS/`).
 
 ## Grundhaltung
@@ -19,7 +19,9 @@ description: Arbeitsweise für das Personal Design System (PDS) des Nutzers. Ver
 
 - „Ich möchte ein neues Projekt X erstellen. Verwende mein Personal Design System.“
 - „Erstelle für Projekt X eine Website / Präsentation / Brand-Guideline.“
-- „Leite die Tokens für Projekt X ab.“
+- „Leite die Tokens für Projekt X ab.“ / „Erstelle das Brand Kit für Projekt X.“
+- „Erstelle einen Pinterest Pin / Instagram Post / Newsletter für Projekt X gemäß meinem Design System.“
+- „Exportiere das AI Brand Context Pack für Projekt X.“
 - „Nimm diese Regel in Core auf.“ / „Prüfe die Core-Kandidaten von Projekt X.“
 
 ## Ablauf für ein neues Projekt
@@ -33,15 +35,35 @@ description: Arbeitsweise für das Personal Design System (PDS) des Nutzers. Ver
 | 5 | **Brand Foundation** | Idee, Positionierung, Zielgruppen, Persönlichkeit, Prinzipien, Voice inkl. Anrede-Regel. Kennzeichnung FAKT/ABLEITUNG/ANNAHME/OFFEN. → **Gate G2** | Vorlagen `brand/` |
 | 6 | **Creative Directions** | Nur bei neuer Marke oder Redesign: Kriterien vorher festlegen, 2–3 echte Alternativen, Style-Tiles mit identischen Proben, Bewertung ohne Gewinner. Bei bestehender Marke: Brand-Import. | `process/creative-direction.md` |
 | 7 | **Nutzer entscheiden lassen** | Richtung, Kombination oder Überarbeitung wählt der Nutzer. → **Gate G3** | `rules/approval-gates.md` |
-| 8 | **Project Tokens** | Aus Core-Architektur ableiten: Primitives (Core-Defaults übernehmen oder begründet ändern), alle Pflicht-Tokens des Vertrags, Kontrastpaare prüfen und dokumentieren. → **Gate G4** | `tokens/architecture.md`, `contract.tokens.json` |
+| 8 | **Project Tokens & Brand Kit** | Tokens aus der Core-Architektur ableiten (Primitives, alle Pflicht-Tokens, Kontraste). Dann `brand-kit/brand-kit.json` füllen (Verweise auf Tokens, nichts kopieren, Offenes bleibt OPEN), `build_brand_kit.py` ausführen, QA-Bericht prüfen. → **Gate G4** (Tokens und Brand Kit) | `tokens/architecture.md`, `brand-kit/README.md` |
 | 9 | **Components** | Core-Spezifikationen mit Projekt-Tokens umsetzen. Nur Abweichungen und Projektkomponenten bekommen eigene Specs. | `components/` |
-| 10 | **Templates** | Core-Template-Strukturen gebranded umsetzen. → **Gate G5** | `templates/` |
+| 10 | **Templates & Kanäle** | Core-Template-Strukturen und Kanal-Starter mit Brand Kit und Tokens umsetzen. → **Gate G5** | `templates/`, `templates/cross-channel.md` |
 | 11 | **Prüfen** | Accessibility und Responsive nach Checkliste prüfen, im Browser verifizieren, Ergebnis berichten. | `principles/quality-standards.md` |
 | 12 | **Trennen** | Projektregeln nur im Projekt. Kein Projektwert in `core/`. | `rules/core-vs-project.md` |
 | 13 | **Core-Kandidaten markieren** | Mögliche universelle Regeln als `[CORE-KANDIDAT]` am Fundort und in `DECISIONS.md` sammeln. | `process/promotion.md` |
 | 14 | **Core nicht still ändern** | Promotion nur über Review und Freigabe durch den Nutzer, mit CHANGELOG und Version. | `process/governance.md` |
 
 Tiefe S darf Schritte verdichten (z. B. Foundation auf einer Seite, G1+G2 zusammen), **überspringt aber keine Gates**.
+
+## Kanalaufträge (z. B. „Erstelle einen Pinterest Pin für Projekt X“)
+
+1. **Projekt finden** (`projects/<x>/`). Unklar welches → nachfragen.
+2. **Brand Kit lesen** (`brand-kit/brand-kit.json`): Version und Status notieren. Kanal muss in `channels` stehen.
+3. **Kanalvorlage anwenden**: Regeln aus [templates/cross-channel.md](../templates/cross-channel.md) und dem Kanal-Template, Starter aus `brand-kit/generator/starters/`.
+4. **Nur freigegebene Assets und Tokens** verwenden (Logos mit `ENTSCHIEDEN`, Werte aus den Token-Dateien).
+5. **Fehlende Informationen erfragen** (Inhalt, Ziel-URL, Bild, Kennzeichnung). Nicht Erfragtes bleibt sichtbar `[OFFEN: …]`.
+6. **Keine neue visuelle Identität erfinden.** Kein Brand Kit → anbieten: Brand Kit aufbauen bzw. bestehende Marke importieren, oder ein klar als „Entwurf ohne Markenidentität“ gekennzeichneter Strukturentwurf.
+7. **Konsistent erzeugen und prüfen**: Inhalte in `channels.<kanal>.sample` eintragen, `build_brand_kit.py` ausführen, QA-Konsistenzprüfung muss bestehen; Pre-Production-Check aus cross-channel.md; Veröffentlichung nur nach G6.
+
+Ist das Kit nur `ENTWURF`, wird das Ergebnis als Entwurf gekennzeichnet.
+
+## Export für externe KI-Tools (AI Brand Context Pack, Core 1.1)
+
+Bei „Exportiere das AI Brand Context Pack für Projekt X“ oder „Brand Kit für ChatGPT“:
+1. Projekt finden, `projects/<x>/brand-kit/brand-kit.json` lesen. Fehlt es: nur die Entwurfsvorlage erzeugen und anbieten, ein Brand Kit aufzubauen oder zu importieren. Nichts erfinden.
+2. `build_brand_kit.py` und danach `export_ai_context.py` ausführen ([brand-kit/README.md](../brand-kit/README.md#7-ai-brand-context-pack-export-für-chatgpt-claude-gemini-)).
+3. `EXPORT-CHECK.md` lesen und berichten: Status (FREIGEGEBEN / ENTWURF / DEMO), offene Punkte, ausgeschlossene Dateien, Funde.
+4. **Nichts selbst hochladen oder veröffentlichen.** Die Weitergabe an externe Dienste gibt der Nutzer frei (G6).
 
 ## Harte Regeln
 
@@ -72,10 +94,12 @@ PDS/
 │   ├── principles/              design-principles, accessibility, responsive, interaction, content-writing, quality-standards, documentation, visual-assets
 │   ├── tokens/                  architecture, naming, color, typography, spacing-sizing, shape-elevation, motion, layout, contract/defaults.tokens.json
 │   ├── components/              README (Architektur, Zustände, Varianten), actions, forms, containers, navigation, feedback, data, _spec-template
-│   ├── templates/               website-landingpage, marketing-page, transaction-flow, app-dashboard, document, presentation, brand-guideline
+│   ├── templates/               website-landingpage, marketing-page, transaction-flow, app-dashboard, document, presentation, brand-guideline, cross-channel, social-media, newsletter-email
+│   ├── brand-kit/               Brand-Kit-Vertrag, generator/ (build_brand_kit.py, export_ai_context.py, starters/), tests/
 │   ├── process/                 project-workflow, project-bootstrap, creative-direction, promotion, governance, project-template/
 │   ├── patterns/                unverbindliche Muster
 │   ├── decisions/               Core-Entscheidungen
 │   └── agent-skill/             dieses Skill, rules/, examples/
-└── projects/<name>/             ein Ordner je Projekt
+├── projects/<name>/             ein Ordner je Projekt
+└── demo/                        fiktive Demo-Marken zum Testen (nie als reale Marke verwenden)
 ```

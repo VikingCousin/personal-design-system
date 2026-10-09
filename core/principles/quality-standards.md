@@ -43,6 +43,12 @@ Jedes Artefakt eines Projekts (Token-Datei, Komponente, Template, Seite, Dokumen
 - [ ] Farbangaben enthalten HEX und OKLCH, bei Print oder Physisch zusätzlich CMYK bzw. RAL/Pantone als gekennzeichnete Näherung
 - [ ] Schriftlizenzen für alle Medien geprüft
 
+### Brand Kit
+- [ ] `build_brand_kit.py` ohne Fehler (QA-REPORT.md), alle Pflicht-Tokens vorhanden
+- [ ] Offene Punkte sichtbar als OFFEN, nichts Offenes als freigegeben ausgegeben
+- [ ] Freigabe nur durch den Nutzer (Gate G4)
+- [ ] Vor Weitergabe an KI-Dienste: `EXPORT-CHECK.md` ohne Funde, Freigabe G6
+
 ### Components
 - [ ] Spezifikation nach [Spec-Vorlage](../components/_spec-template.md)
 - [ ] Alle relevanten Zustände definiert

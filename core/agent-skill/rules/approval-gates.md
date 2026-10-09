@@ -10,7 +10,7 @@
 | **G1** | Brief | Brief + Analyse: Lücken, Widersprüche, gebündelte offene Fragen | Brief bestätigt, Fragen beantwortet oder bewusst offen |
 | **G2** | Brand Foundation | Foundation + Voice mit Kennzeichnung, offene Entscheidungen (A/B/C) mit Optionen | Arbeitsfreigabe, Änderungen, offene Punkte |
 | **G3** | Creative Direction bzw. Brand-Import | 2–3 Richtungen mit Style-Tiles und Bewertung, kein Gewinner. Bei bestehender Marke: Ergebnis des Brand-Imports mit gefundenen Problemen und Lösungsoptionen | wählt Richtung bzw. Kombination, verlangt Überarbeitung bzw. entscheidet über die Import-Befunde |
-| **G4** | Tokens | Token-Dateien, Kontrastnachweis, Schriftlizenzen, Abweichungen von Core-Defaults | Freigabe der Werte |
+| **G4** | Tokens und Brand Kit | Token-Dateien, Kontrastnachweis, Schriftlizenzen, Abweichungen von Core-Defaults **und** das erzeugte Brand Kit (BRAND-KIT.html/.pdf, QA-Bericht, offene Punkte) | Freigabe der Werte und des Brand Kits (`meta.status: FREIGEGEBEN`, `approved_by`, `approved_at`) |
 | **G5** | Components / Templates | umgesetzte Komponenten bzw. Templates mit Prüfergebnis (A11y, Responsive) | Freigabe (einzeln oder gebündelt) |
 | **G6** | Release | was veröffentlicht, deployt, gedruckt oder versendet wird | ausdrückliche Freigabe für genau diesen Schritt |
 
@@ -30,6 +30,7 @@ Diese Punkte trifft **immer** der Nutzer. Claude darf Optionen vorbereiten, begr
 - Umgang mit sensiblen Themen (z. B. KI-generierte Inhalte, Gesundheit, Tod, Finanzen)
 - Änderungen an `core/`
 - Veröffentlichung, Deployment, Versand, Druckfreigabe
+- Weitergabe eines AI Brand Context Packs an externe KI-Dienste (gilt als Veröffentlichung, G6)
 - Löschen von Projektmaterial
 
 ## Was Claude ohne Gate tun darf
